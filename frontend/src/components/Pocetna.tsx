@@ -14,7 +14,7 @@ export default function Pocetna() {
         priority
         
       />
-      <div className="inset-0 absolute flex items-start justify-center  flex-col px-24 space-y-9">
+      <div className="absolute flex items-start justify-center inset-0 flex-col px-24 space-y-9">
         <h1 className="font-bold text-5xl leading-normal">
           Naša firma je posvećena pružanju<br/> vrhunskih usluga moleraja i krečenja
           za<br/> transformaciju vaših prostora
