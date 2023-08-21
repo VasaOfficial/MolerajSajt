@@ -57,7 +57,7 @@ export default function GalerijaRadova() {
             quality={100}
             width={900}
             height={900}
-            className="rounded-xl"
+            className="rounded-xl shadow-2xl"
           />
           <div className="flex flex-col items-center">
             <p className="text-center">AAAAAAAAAAAAAAAAAAAAAA</p>
@@ -71,7 +71,7 @@ export default function GalerijaRadova() {
             quality={100}
             width={900}
             height={900}
-            className="rounded-xl"
+            className="rounded-xl shadow-2xl"
           />
           <div className="flex flex-col items-center">
             <p>AAAAAAAAAAAAAAAAAAAAAA</p>
@@ -84,7 +84,7 @@ export default function GalerijaRadova() {
             quality={100}
             width={900}
             height={900}
-            className="rounded-xl"
+            className="rounded-xl shadow-2xl"
           />
           <div className="flex flex-col items-center">
             <p>AAAAAAAAAAAAAAAAAAAAAA</p>
@@ -97,7 +97,7 @@ export default function GalerijaRadova() {
             quality={100}
             width={900}
             height={900}
-            className="rounded-xl"
+            className="rounded-xl shadow-2xl"
           />
           <div className="flex flex-col items-center">
             <p>AAAAAAAAAAAAAAAAAAAAAA</p>

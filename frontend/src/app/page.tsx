@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import GalerijaRadova from "@/components/GalerijaRadova";
 import Pocetna from "@/components/Pocetna";
 import Video from "@/components/Video";
@@ -9,6 +10,7 @@ export default function Home() {
         <Pocetna />  
        <GalerijaRadova/>
        <Video/>
+       <Footer/>
       </main>
     </>
   );
