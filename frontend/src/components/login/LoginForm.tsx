@@ -3,6 +3,8 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
+import axios from 'axios';
+import { useRouter } from 'next/navigation'
 
 import { Button } from '../ui/button';
 import {
@@ -21,12 +23,28 @@ const FormSchema = z.object({
 });
 
 export default function LoginForm() {
+
+  const router = useRouter()
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
 
-  const onSubmit = (values: z.infer<typeof FormSchema>) => {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof FormSchema>) => {
+    try {
+      const response = await axios.post('http://moleraj.local/backend/admin-login.php', {
+        username: values.username,
+        password: values.password,
+      });
+  
+      if (response.data.success) {
+        router.push('/admin_interface')
+      } else {
+        alert('login failed')
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
   return (
     <Form {...form}>
