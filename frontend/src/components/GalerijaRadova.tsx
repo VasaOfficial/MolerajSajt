@@ -7,8 +7,8 @@ import picture from "@/public/assets/before_after.jpg";
 
 export default function GalerijaRadova() {
   return (
-    <div className="relative flex flex-col items-center justify-center ">
-      <h1 className="absolute top-0 z-20 text-6xl font-bold">Galerija radova</h1>
+    <div className="relative flex flex-col items-center justify-center">
+      <h1 className="absolute top-0 z-10 text-6xl font-bold">Galerija radova</h1>
       <div className="flex flex-col">
         <Image
           src={background}
@@ -49,7 +49,7 @@ export default function GalerijaRadova() {
         className="absolute left-0 bottom-0 w-screen"
       />
 
-      <div className="flex flex-col gap-28 absolute w-screen">
+      <div className="flex flex-col gap-40 absolute w-screen">
         <div className="flex flex-row-reverse items-center justify-evenly ">
           <Image
             alt="pic1"
@@ -57,7 +57,7 @@ export default function GalerijaRadova() {
             quality={100}
             width={900}
             height={900}
-            className="rounded-xl"
+            className="rounded-xl shadow-2xl"
           />
           <div className="flex flex-col items-center">
             <p className="text-center">AAAAAAAAAAAAAAAAAAAAAA</p>
@@ -71,7 +71,7 @@ export default function GalerijaRadova() {
             quality={100}
             width={900}
             height={900}
-            className="rounded-xl"
+            className="rounded-xl shadow-2xl"
           />
           <div className="flex flex-col items-center">
             <p>AAAAAAAAAAAAAAAAAAAAAA</p>
@@ -84,7 +84,7 @@ export default function GalerijaRadova() {
             quality={100}
             width={900}
             height={900}
-            className="rounded-xl"
+            className="rounded-xl shadow-2xl"
           />
           <div className="flex flex-col items-center">
             <p>AAAAAAAAAAAAAAAAAAAAAA</p>
@@ -97,7 +97,7 @@ export default function GalerijaRadova() {
             quality={100}
             width={900}
             height={900}
-            className="rounded-xl"
+            className="rounded-xl shadow-2xl"
           />
           <div className="flex flex-col items-center">
             <p>AAAAAAAAAAAAAAAAAAAAAA</p>
