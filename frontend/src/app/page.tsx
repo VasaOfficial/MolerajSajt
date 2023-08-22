@@ -1,3 +1,15 @@
+import GalerijaRadova from "@/components/GalerijaRadova";
+import Pocetna from "@/components/Pocetna";
+import Video from "@/components/Video";
+
 export default function Home() {
-  return <h1 className="text-4xl">Home</h1>;
+  return (
+    <>
+      <main className="flex flex-col h-screen w-screen">
+        <Pocetna />  
+       <GalerijaRadova/>
+       <Video/>
+      </main>
+    </>
+  );
 }
