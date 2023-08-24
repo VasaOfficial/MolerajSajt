@@ -32,6 +32,7 @@ export function DataTableRowActions<TData>({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
+        <DropdownMenuItem>Procitaj</DropdownMenuItem>
         <DropdownMenuItem>Izmeni</DropdownMenuItem>
         <DropdownMenuItem>Postuj</DropdownMenuItem>
         <DropdownMenuSeparator />

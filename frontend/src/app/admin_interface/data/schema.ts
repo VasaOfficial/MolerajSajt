@@ -6,6 +6,8 @@ export const taskSchema = z.object({
   id: z.number(),
   title: z.string(),
   status: z.string(),
+  review: z.string(),
+  stars: z.number(),
 })
 
 export type Task = z.infer<typeof taskSchema>

@@ -2,66 +2,92 @@
     {
       "id": 1,
       "title": "Lazar",
-      "status": "in progress"
+      "status": "in progress",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 2,
       "title": "Lazar",
-      "status": "canceled"
+      "status": "canceled",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 3,
       "title": "Lazar",
-      "status": "done"
+      "status": "done",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 4,
       "title": "Lazar",
-      "status": "canceled"
+      "status": "canceled",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 5,
       "title": "Lazar",
-      "status": "canceled"
+      "status": "canceled",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 6,
       "title": "Lazar",
-      "status": "done"
+      "status": "done",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 7,
       "title": "Lazar",
-      "status": "done"
+      "status": "done",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 8,
       "title": "Lazar",
-      "status": "in progress"
+      "status": "in progress",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 9,
       "title": "Lazar",
-      "status": "done"
+      "status": "done",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 10,
       "title": "Lazar",
-      "status": "in progress"
+      "status": "in progress",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 11,
       "title": "Lazar",
-      "status": "done"
+      "status": "done",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 12,
       "title": "Lazar",
-      "status": "canceled"
+      "status": "canceled",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     },
     {
       "id": 13,
       "title": "Lazar",
-      "status": "canceled"
+      "status": "canceled",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat leo augue. Phasellus suscipit metus nisi, in placerat tellus auctor ut.",
+      "stars": 4
     }
   ]

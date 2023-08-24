@@ -57,6 +57,38 @@ export const columns: ColumnDef<Task>[] = [
     },
   },
   {
+    accessorKey: "review",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Recenzija" />
+    ),
+    cell: ({ row }) => {
+
+      return (
+        <div className="flex space-x-2">
+          <span className="max-w-[500px] truncate font-medium">
+            {row.getValue("review")}
+          </span>
+        </div>
+      )
+    },
+  },
+  {
+    accessorKey: "stars",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Zvezdice" />
+    ),
+    cell: ({ row }) => {
+
+      return (
+        <div className="flex space-x-2">
+          <span className="max-w-[500px] truncate font-medium">
+            {row.getValue("stars")}
+          </span>
+        </div>
+      )
+    },
+  },
+  {
     accessorKey: "status",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Status" />
