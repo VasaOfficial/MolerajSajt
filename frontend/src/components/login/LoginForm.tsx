@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
@@ -23,6 +24,7 @@ const FormSchema = z.object({
 });
 
 export default function LoginForm() {
+  const [loginError, setLoginError] = useState(false);
 
   const router = useRouter()
 
@@ -43,9 +45,10 @@ export default function LoginForm() {
         alert('login failed')
       }
     } catch (error) {
-      console.error('Error:', error);
+      setLoginError(true);
     }
   };
+  
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-6">
@@ -93,6 +96,7 @@ export default function LoginForm() {
       <p className="mt-2 text-center text-base text-gray-600">
         For admins only!
       </p>
+      {loginError && <p className="mt-2 text-center text-red-600">Login failed. Please check your credentials.</p>}
     </Form>
   );
 }

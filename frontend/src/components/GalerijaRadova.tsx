@@ -7,7 +7,7 @@ import picture from "@/public/assets/before_after.jpg";
 
 export default function GalerijaRadova() {
   return (
-    <div className="relative flex flex-col items-center justify-center">
+    <section className="relative flex flex-col items-center justify-center">
       <h1 className="absolute top-0 z-10 text-6xl font-bold">Galerija radova</h1>
       <div className="flex flex-col">
         <Image
@@ -35,7 +35,6 @@ export default function GalerijaRadova() {
           className="w-screen  h-screen"
         />
       </div>
-
       <Image
         alt="cover2"
         src={cover2}
@@ -104,6 +103,6 @@ export default function GalerijaRadova() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

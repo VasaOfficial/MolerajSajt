@@ -5,7 +5,7 @@ import cover1 from "@/public/assets/painting_cover1.png";
 
 export default function Pocetna() {
   return (
-    <div className="relative">
+    <section className="relative">
       <Image
         src={background}
         alt="background image"
@@ -37,6 +37,6 @@ export default function Pocetna() {
         className="absolute left-0 bottom-0 w-screen"
         quality={100}
       />
-    </div>
+    </section>
   );
 }

@@ -4,7 +4,7 @@ import { buttonVariants } from './ui/button';
 
 export default function Navbar() {
   return (
-    <div className="fixed top-0 z-50 w-full border-b border-s-zinc-200 bg-zinc-100 py-2">
+    <nav className="fixed top-0 z-50 w-full border-b border-s-zinc-200 bg-zinc-100 py-2">
       <div className="container flex items-center justify-between">
         <Link href="/">
           <svg
@@ -30,6 +30,6 @@ export default function Navbar() {
           Sign in
         </Link>
       </div>
-    </div>
+    </nav>
   );
 }

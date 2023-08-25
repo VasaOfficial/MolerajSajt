@@ -6,12 +6,11 @@ import cover1 from "@/public/assets/painting_cover1.png";
 
 export default function Video() {
   return (
-    <div className="relative flex flex-col items-center justify-start ">
+    <section className="relative flex flex-col items-center justify-start ">
       <h1 className="absolute top-0 z-10 text-6xl font-bold">Video</h1>
       <Image
         src={background}
         alt="background image"
-        quality={100}
         className="w-screen "
         style={{ height: "325rem" }}
       />
@@ -19,13 +18,11 @@ export default function Video() {
       <Image
         alt="cover2"
         src={cover2}
-        quality={100}
         className="absolute left-0 top-0 w-screen"
       />
       <Image
         alt="cover1"
         src={cover1}
-        quality={100}
         className="absolute left-0 bottom-0 w-screen"
       />
 
@@ -75,6 +72,6 @@ export default function Video() {
           allowFullScreen
         ></iframe>
       </div>
-    </div>
+    </section>
   );
 }

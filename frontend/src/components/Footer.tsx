@@ -7,17 +7,15 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="text-2xl relative">
+    <footer className="text-2xl relative">
       <Image
         src={footer}
         alt="background image"
-        quality={100}
         className="w-screen  h-screen"
       />
       <Image
         alt="cover2"
         src={cover2}
-        quality={100}
         className="absolute left-0 top-0 w-screen"
       />
       <div className="flex flex-col absolute w-screen items-center justify-end inset-0 p-10 gap-8">
@@ -47,6 +45,6 @@ export default function Footer() {
        </div>
       <p className="font-semibold">Copyright © 2023 Ime firm</p>
       </div>
-    </div>
+    </footer>
   );
 }

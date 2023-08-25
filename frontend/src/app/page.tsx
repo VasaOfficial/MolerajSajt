@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import GalerijaRadova from "@/components/GalerijaRadova";
 import Pocetna from "@/components/Pocetna";
+import Recenzije from "@/components/Recenzije";
 import Video from "@/components/Video";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <Pocetna />  
        <GalerijaRadova/>
        <Video/>
+       <Recenzije />
        <Footer/>
       </main>
     </>
