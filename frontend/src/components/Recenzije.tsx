@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link'
 import ReviewCards from "./ReviewCards";
 import rightArrow from '@/public/assets/1.png'
 import leftArrow from '@/public/assets/3.png'
@@ -21,7 +22,9 @@ export default function Recenzije() {
                     <Image src={rightArrow} alt="right arrow"></Image>
                 </div>
             </div>
-            <button className="text-black text-2xl mt-14 font-semibold bg-yellow-500 p-8 hover:text-white">Ostavite Komentar</button>
+            <Link href="/review">
+              <button className="text-black text-2xl mt-14 font-semibold bg-yellow-500 p-8 hover:text-white">Ostavite Komentar</button>
+            </Link>
         </div>
         </div>
       </section>
