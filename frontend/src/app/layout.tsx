@@ -1,5 +1,7 @@
 import '@/styles/global.css';
 import '@smastrom/react-rating/style.css'
+import { ReCaptchaProvider } from "next-recaptcha-v3";
+import { ReactQueryProvider } from './ReactQueryProvider'; 
 
 import type { Metadata } from 'next';
 
@@ -43,13 +45,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <ReactQueryProvider>
     <html lang="en">
       <body>
         <main className="flex h-screen flex-col items-center justify-center">
           <Navbar />
-          {children}
+          <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}>
+            {children}
+          </ReCaptchaProvider>
         </main>
       </body>
     </html>
+    </ReactQueryProvider>
   );
 }
