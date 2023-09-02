@@ -23,7 +23,7 @@ import {
 import Alert from '@/components/Alert';
 
 const FormSchema = z.object({
-  name: z.string().min(1).max(10),
+  name: z.string().min(1).max(15),
   feedback: z.string().min(1).max(100),
 });
 
@@ -65,12 +65,15 @@ export default function ReviewForm() {
     }
   );
   
-  const onSubmit = async (values: z.infer<typeof FormSchema>) => {
-    mutation.mutateAsync(); // Trigger the mutation
-    setIsSubmitted(true); 
-  
-    // Note: You can set setIsSubmitted here if you want to show the alert immediately after submission
-  };
+  const onSubmit = async () => {
+    try {
+      await mutation.mutateAsync(); // Trigger the mutation
+      setIsSubmitted(true);
+    } catch (error) {
+      // Handle any errors that occur during form submission
+      console.error(error);
+    }
+  };  
 
   return (
     <Form {...form}>
