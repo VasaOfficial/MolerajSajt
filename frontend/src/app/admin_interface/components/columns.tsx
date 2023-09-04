@@ -41,23 +41,23 @@ export const columns: ColumnDef<Task>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "title",
+    accessorKey: "name",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Ime" />
+      <DataTableColumnHeader column={column} title="Name" />
     ),
     cell: ({ row }) => {
 
       return (
         <div className="flex space-x-2">
           <span className="max-w-[500px] truncate font-medium">
-            {row.getValue("title")}
+            {row.getValue("name")}
           </span>
         </div>
       )
     },
   },
   {
-    accessorKey: "review",
+    accessorKey: "feedback",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Recenzija" />
     ),
@@ -66,14 +66,14 @@ export const columns: ColumnDef<Task>[] = [
       return (
         <div className="flex space-x-2">
           <span className="max-w-[500px] truncate font-medium">
-            {row.getValue("review")}
+            {row.getValue("feedback")}
           </span>
         </div>
       )
     },
   },
   {
-    accessorKey: "stars",
+    accessorKey: "rating",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Zvezdice" />
     ),
@@ -82,7 +82,7 @@ export const columns: ColumnDef<Task>[] = [
       return (
         <div className="flex space-x-2">
           <span className="max-w-[500px] truncate font-medium">
-            {row.getValue("stars")}
+            {row.getValue("rating")}
           </span>
         </div>
       )

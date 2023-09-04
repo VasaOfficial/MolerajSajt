@@ -1,34 +1,34 @@
-import { promises as fs } from "fs"
-import path from "path"
-import { z } from "zod"
+'use client'
 
-import { columns } from "./components/columns"
-import { DataTable } from "./components/data-table"
-import { taskSchema } from "./data/schema"
+import { useEffect, useState } from "react";
+import { DataTable } from "./components/data-table";
+import { columns } from "./components/columns";
 
-// Simulate a database read for tasks.
-async function getTasks() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "src/app/admin_interface/data/tasks.json")
-  )
+export default function TaskPage() {
+  const [tasks, setTasks] = useState([]);
 
-  const tasks = JSON.parse(data.toString())
-
-  return z.array(taskSchema).parse(tasks)
-}
-
-export default async function TaskPage() {
-  const tasks = await getTasks()
+  useEffect(() => {
+    // Fetch data from your PHP API endpoint
+    fetch("http://moleraj.local/backend/review.php")
+      .then((response) => response.json())
+      .then((data) => {
+        // Assuming your API response contains an array of reviews
+        setTasks(data);
+        console.log(data)
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   return (
     <>
       <div className="hidden mt-20 h-full flex-1 flex-col space-y-8 p-8 md:flex">
         <div className="flex items-center justify-between space-y-2">
-            <h2 className="text-2xl font-bold tracking-tight">Admin Interface</h2>
+          <h2 className="text-2xl font-bold tracking-tight">Admin Interface</h2>
         </div>
         <DataTable data={tasks} columns={columns} />
       </div>
     </>
-  )
+  );
 }
-  

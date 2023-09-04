@@ -6,8 +6,8 @@ import {
   
   export const statuses = [
     {
-      value: "in progress",
-      label: "In Progress",
+      value: "pending",
+      label: "Pending",
       icon: StopwatchIcon,
     },
     {
@@ -16,8 +16,8 @@ import {
       icon: CheckCircledIcon,
     },
     {
-      value: "canceled",
-      label: "Canceled",
+      value: "removed",
+      label: "Removed",
       icon: CrossCircledIcon,
     },
   ]
