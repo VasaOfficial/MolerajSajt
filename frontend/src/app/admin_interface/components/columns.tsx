@@ -65,7 +65,7 @@ export const columns: ColumnDef<Task>[] = [
 
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] truncate font-medium">
+          <span className="max-w-[500px] font-medium hover:overflow-visible cursor-pointer">
             {row.getValue("feedback")}
           </span>
         </div>

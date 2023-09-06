@@ -57,7 +57,6 @@ export function DataTableRowActions<TData extends { id: number }>({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
-        <DropdownMenuItem>Procitaj</DropdownMenuItem>
         <DropdownMenuItem>Izmeni</DropdownMenuItem>
         <DropdownMenuItem>Postuj</DropdownMenuItem>
         <DropdownMenuSeparator />
