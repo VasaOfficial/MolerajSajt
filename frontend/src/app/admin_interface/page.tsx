@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { DataTable } from "./components/data-table";
 import { columns } from "./components/columns";
+import useTaskStore from '@/stores/reviewStore';
 
 export default function TaskPage() {
-  const [tasks, setTasks] = useState([]);
-
+  const { tasks, setTasks } = useTaskStore();
+  
   useEffect(() => {
     // Fetch data from your PHP API endpoint
     fetch("http://moleraj.local/backend/review.php")
@@ -14,12 +15,11 @@ export default function TaskPage() {
       .then((data) => {
         // Assuming your API response contains an array of reviews
         setTasks(data);
-        console.log(data)
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []);
+  }, [tasks]);
 
   return (
     <>
