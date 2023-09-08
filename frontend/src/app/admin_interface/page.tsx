@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect } from "react";
-import { DataTable } from "./components/data-table";
-import { columns } from "./components/columns";
+import { DataTable } from "./components/Table/data-table";
+import { columns } from "./components/Table/columns";
 import useTaskStore from '@/stores/reviewStore';
 
 export default function TaskPage() {

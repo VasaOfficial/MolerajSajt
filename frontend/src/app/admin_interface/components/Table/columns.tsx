@@ -2,10 +2,10 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 
-import { Checkbox } from "../ui/checkbox"
+import { Checkbox } from "../../ui/checkbox"
 
-import { statuses } from "../data/data"
-import { Task } from "../data/schema"
+import { statuses } from "../../data/data"
+import { Task } from "../../data/schema"
 import { DataTableColumnHeader } from "./data-table-column-header"
 import { DataTableRowActions } from "./data-table-row-actions"
 
