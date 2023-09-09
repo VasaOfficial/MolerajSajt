@@ -85,6 +85,27 @@ export function DataTableRowActions<TData extends { id: number; name: string; fe
     setIsEditModalOpen(false);
   };
 
+  const handleApproveReview = () => {
+    if (window.confirm("Da li ste sigurni da hocete da odobrite ovaj komentar?")) {
+      // Send the review_id in the request body
+      axios.put(`http://moleraj.local/backend/approve-reviews.php`, {
+        review_id: row.original.id,
+        status: "done",
+      })
+        .then((response) => {
+          if (response.data.success) {
+            // Refresh the data by invalidating the query
+            queryClient.invalidateQueries(queryKey);
+          } else {
+            alert("Review approval failed.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error approving review:", error);
+        });
+    }
+  };
+
   return (
     <div>
       <DropdownMenu>
@@ -99,7 +120,7 @@ export function DataTableRowActions<TData extends { id: number; name: string; fe
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-[160px]">
           <DropdownMenuItem onClick={handleEditRow}>Izmeni</DropdownMenuItem>
-          <DropdownMenuItem>Postuj</DropdownMenuItem>
+          <DropdownMenuItem onClick={handleApproveReview}>Postuj</DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={handleDeleteRow}>Izbrisi </DropdownMenuItem>

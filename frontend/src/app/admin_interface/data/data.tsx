@@ -1,6 +1,5 @@
 import {
     CheckCircledIcon,
-    CrossCircledIcon,
     StopwatchIcon,
   } from "@radix-ui/react-icons"
   
@@ -14,10 +13,5 @@ import {
       value: "done",
       label: "Done",
       icon: CheckCircledIcon,
-    },
-    {
-      value: "removed",
-      label: "Removed",
-      icon: CrossCircledIcon,
     },
   ]
