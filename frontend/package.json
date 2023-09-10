@@ -38,6 +38,7 @@
     "@smastrom/react-rating": "^1.3.2",
     "@tanstack/react-query": "^4.33.0",
     "@tanstack/react-table": "^8.9.3",
+    "@types/react-slick": "^0.23.10",
     "axios": "^1.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
@@ -50,6 +51,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.2",
@@ -141,6 +145,5 @@
       "@semantic-release/git",
       "@semantic-release/github"
     ]
-  },
-  "author": "Ixartz (https://github.com/ixartz)"
+  }
 }
