@@ -53,5 +53,5 @@
     "**/*.tsx",
     ".storybook/*.ts",
     ".next/types/**/*.ts"
-  ]
+, "src/app/utils/test.js"  ]
 }
