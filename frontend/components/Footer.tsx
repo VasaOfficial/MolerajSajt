@@ -1,49 +1,96 @@
-import React from "react";
 import Image from "next/image";
-import footer from "@/public/assets/footer.png";
-import cover2 from "@/public/assets/painting_cover2.png";
-import fb from "@/public/assets/facebook.png"
 import Link from "next/link";
+import BlackLogo from '@/public/assets/logo-black.png'
+import PhoneIcon from '@/public/assets/phone.svg'
+import PinLogo from '@/public/assets/pin.svg'
 
 export default function Footer() {
   return (
-    <footer className="text-2xl relative">
-      <Image
-        src={footer}
-        alt="background image"
-        className="w-screen  h-screen"
-      />
-      <Image
-        alt="cover2"
-        src={cover2}
-        className="absolute left-0 top-0 w-screen"
-      />
-      <div className="flex flex-col absolute w-screen items-center justify-end inset-0 p-10 gap-8">
-        <h1 className="font-bold ">Mozete nas kontaktirati na broj:</h1>
-        <p className="font-semibold mb-10">Tel. 549504864046</p>
-        <h1 className="font-bold ">Ili putem emaila:</h1>
-        <p className="font-semibold cursor-pointer">email@gmail.com</p>
-       <div className="flex">
-          <Link href={'/'}>
-            <Image
-            alt="cover2"
-            src={fb}
-            width={40}
-            height={40}
-            className="my-8 cursor-pointer"
-          />
-          </Link>
-        <Link href={'/'}>
-          <Image
-            alt="cover2"
-            src={fb}
-            width={40}
-            height={40}
-            className="my-8 cursor-pointer"
-          />
-        </Link>
-       </div>
-      <p className="font-semibold">Copyright © 2023 Ime firm</p>
+    <footer className=" bg-blackBg text-white">
+      <div className="mx-auto pt-20 max-w-[70%]">
+        {/** Top section */}
+        <div className="flex justify-between w-full">
+          <div>
+            <Link href='/' aria-label="logo">
+              <Image alt="logo" src={BlackLogo}></Image>
+            </Link>
+          </div>
+          <div className="flex-nowrap flex">
+            <ul className="pr-16 space-y-5">
+              <li className="">
+                <span className="tracking-widest text-2xl font-bold">Quick Links</span>
+              </li>
+              <li className="pt-6">
+                <span className="hover:text-[darkRed] linkWithLine">Painters In Highland</span>
+              </li>
+              <li className="cs-li">
+                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
+              </li>
+              <li className="cs-li">
+                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
+              </li>
+              <li className="cs-li">
+                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
+              </li>
+            </ul>
+            <ul className="pr-16 space-y-5">
+              <li className="">
+                <span className="tracking-widest text-2xl font-bold">Services</span>
+              </li>
+              <li className="pt-6">
+                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
+              </li>
+              <li className="cs-li">
+                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
+              </li>
+              <li className="cs-li">
+                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
+              </li>
+              <li className="cs-li">
+                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
+              </li>
+            </ul>
+            <ul className="space-y-5">
+              <li className="">
+                <span className="tracking-widest text-2xl font-bold">Contact</span>
+              </li>
+              <li className="flex items-center pt-6">
+                <Image alt="phone" width={24} height={24} src={PhoneIcon}></Image>
+                <p className="ml-2 hover:text-[darkRed]">(219) 384-0962</p>
+              </li>
+              <li className="cs-li flex items-center">
+                <Image alt="location" width={24} height={24} src={PinLogo}></Image>
+                <p className="ml-2 hover:text-[darkRed]">Grad Beograd I Okolina</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/** Middle section */}
+        <div className="my-8">
+          <ul className="flex gap-10">
+            <li className="cs-li">
+              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
+            </li>
+            <li className="cs-li">
+              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
+            </li>
+            <li className="cs-li">
+              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
+            </li>
+            <li className="cs-li">
+              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
+            </li>
+            <li className="cs-li">
+              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
+            </li>
+          </ul>
+        </div>
+        {/** Bottom section */}
+        <div className="w-full md:w-auto border-t flex justify-center items-center border-grayBorder">
+          <span className="my-10 text-center text-base leading-6">
+            © Copyright 2023 - Moleraj Beograd
+          </span>
+        </div>
       </div>
     </footer>
   );

@@ -8,7 +8,7 @@ import picture from "@/public/assets/before_after.jpg";
 export default function GalerijaRadova() {
   return (
     <section className="relative flex flex-col items-center justify-center">
-      <h1 className="absolute top-0 z-10 text-6xl font-bold">Galerija radova</h1>
+      <h1 className="absolute top-0 z-10 text-6xl font-bold text-red-900">Galerija radova</h1>
       <div className="flex flex-col">
         <Image
           src={background}
