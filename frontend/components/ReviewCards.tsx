@@ -1,27 +1,17 @@
 import Image from "next/image";
-import apostrof from 'public/assets/apostrof.png'
-import star from 'public/assets/star.png'
+import quote from 'public/assets/quote.svg'
 
 type ReviewCardsProps = {
   name: string;
-  rating: number;
   feedback: string;
 }
 
-export default function ReviewCards({ name, rating, feedback }: ReviewCardsProps) {
+export default function ReviewCards({ name, feedback }: ReviewCardsProps) {
   return (
-    <div className={`flex-col bg-slate-200 p-16 mx-16 text-2xl font-semibold rounded-md flex text-center`}>
-      <div className="flex flex-col items-start">
-        <Image src={apostrof} alt="apostrof" quality={100} width={100} height={100} className="mb-10" />
-        <p>{feedback}</p>
-      </div>
-      <div className="flex items-center justify-between mt-16">
-        <p>{name}</p>
-        <div className="p-4 bg-blue-800 rounded-md text-white flex gap-4">
-          <p>{rating}</p>
-          <Image src={star} alt="star" width={30} height={30} />
-        </div>
-      </div>
-    </div>
+    <li className={`border-[darkRed] border flex flex-col items-start bg-[#0a0a0a] m-0 py-24 px-24`}>
+      <Image src={quote} alt="quote" quality={100} width={40} height={38} className="h-auto mb-8" />
+      <p className="text-gray-300 my-10 max-w-sm text-xl">{feedback}</p>
+      <span className="text-white text-2xl">- {name}</span>
+    </li>
   );
 }

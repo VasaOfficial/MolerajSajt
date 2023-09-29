@@ -3,15 +3,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import ReviewCards from "./ReviewCards";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import supabase from "utils/supabaseClient";
 
 type Review = {
   id: number;
   name: string;
-  rating: number;
   feedback: string;
 };
 
@@ -42,37 +38,33 @@ export default function Recenzije() {
     }
   };
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 3500,
-    autoplaySpeed: 3500,
-    cssEase: "linear"
-  };
+    // Slice the array to include only the first 3 items
+    const displayedReviews = approvedReviews.slice(0, 3);
 
   return (
-    <section className="relative bg-blue-950">
-      <div className="m-20 flex flex-col justify-center items-center">
-      <div className="w-full">
-        <Slider {...settings}>
-          {approvedReviews.map((review) => (
+    <section className="relative bg-blackBg py-24">
+      <div className="flex flex-col justify-center items-center max-w-[70%] w-full m-auto gap-20">
+        <div className="text-center w-full flex flex-col items-center">
+          <span className="text-golden text-lg font-bold tracking-widest">Testemonials</span>
+          <h2 className="text-white uppercase text-5xl font-black text-center tracking-wider m-0 mb-8">What our costumers have to say about our work</h2>
+          <p className="text-opacity-80 text-white leading-6 max-w-2xl m-0">We don’t just talk a big game - our clients believe in us too. Here’s what some of our customers had to say about their experience with Real Deal Painting in NW Indiana:</p>
+        </div>
+        <ul className="flex justify-center items-center gap-20">
+          {displayedReviews.map((review) => (
             <div key={review.id}>
               <ReviewCardsMemoized
                 name={review.name}
-                rating={review.rating}
                 feedback={review.feedback}
               />
             </div>
           ))}
-        </Slider>
-      </div>
-        <div className="mt-10 flex flex-col justify-center items-center">
-          <Link href="/review">
-            <button className="text-black text-2xl mt-14 font-semibold bg-yellow-500 p-8 hover:text-white">
-              Ostavite Komentar
-            </button>
+        </ul>
+        <div className="flex flex-col text-lg justify-center items-center text-white gap-10">
+          <Link href="/review_form" className="bg-darkRed p-5 cursor-pointer font-semibold transition-link">
+            Ostavite recenziju
+          </Link>
+          <Link href='/' className="bg-darkRed p-5 cursor-pointer font-semibold transition-link">
+            Procitajte sve recenzije
           </Link>
         </div>
       </div>

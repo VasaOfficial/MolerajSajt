@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { Input } from 'components/ui/input';
 import { Textarea } from "components/ui/textarea"
-import { Rating } from 'components/ui/Rating'
 import { useReCaptcha, ReCaptchaProvider } from "next-recaptcha-v3";
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import supabase from 'utils/supabaseClient';
@@ -27,7 +26,6 @@ const FormSchema = z.object({
 });
 
 export default function ReviewForm() {
-  const [rating, setRating] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -45,7 +43,6 @@ export default function ReviewForm() {
         {
           name: form.getValues('name'),
           feedback: form.getValues('feedback'),
-          rating: rating,
           status: 'pending',
         },
       ]);
@@ -116,7 +113,6 @@ export default function ReviewForm() {
               </FormItem>
             )}
           />
-          <Rating rating={rating} setRating={setRating} />
           <Button type='submit' className="rounded bg-blue-700 py-4 px-8 text-xl text-white">Posalji</Button>
         </div>
       </ReCaptchaProvider>

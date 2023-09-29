@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import BlackLogo from '@/public/assets/logo-black.png'
+import BlackLogo from '@/public/assets/logo.png'
 import PhoneIcon from '@/public/assets/phone.svg'
 import PinLogo from '@/public/assets/pin.svg'
 

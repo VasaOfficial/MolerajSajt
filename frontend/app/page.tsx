@@ -12,6 +12,7 @@ export default function Home() {
        <GalerijaRadova/>
        <Video/>
        <Recenzije />
+       <div className="bg-darkRed w-full py-16"></div>
        <Footer/>
       </main>
     </>
