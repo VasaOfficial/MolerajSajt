@@ -21,6 +21,7 @@ module.exports = {
         grayBorder: '#3f3f46',
         blackBg: '#121212',
         golden: '#D87D2B',
+        iconBg: '#282828',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

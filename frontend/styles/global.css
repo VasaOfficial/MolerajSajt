@@ -110,7 +110,6 @@
 }
 
 /* button effect */
-
 .transition-link {
   position: relative;
   color: white;
@@ -138,4 +137,37 @@
 .transition-link:hover {
   color: darkRed;
   z-index: 1;
+}
+
+/* Define the card animation */
+@keyframes cardHover {
+  0% {
+    transform: translateY(0);
+    background-color: transparent;
+    box-shadow: none;
+  }
+  50% {
+    transform: translateY(-5px);
+    background-color: #404040;
+    box-shadow: 0 0 50px 15px #404040;
+  }
+  100% {
+    transform: translateY(-5px);
+    background-color: #404040;
+    box-shadow: 0 0 50px 15px #404040;
+  }
+}
+
+.card {
+  transform: translateY(0);
+  background-color: transparent;
+  box-shadow: none;
+  transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #404040;
+  box-shadow: 0 0 50px 15px #404040;
+  transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
 }

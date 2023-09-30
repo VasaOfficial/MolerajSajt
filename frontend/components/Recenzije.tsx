@@ -47,7 +47,7 @@ export default function Recenzije() {
         <div className="text-center w-full flex flex-col items-center">
           <span className="text-golden text-lg font-bold tracking-widest">Testemonials</span>
           <h2 className="text-white uppercase text-5xl font-black text-center tracking-wider m-0 mb-8">What our costumers have to say about our work</h2>
-          <p className="text-opacity-80 text-white leading-6 max-w-2xl m-0">We don’t just talk a big game - our clients believe in us too. Here’s what some of our customers had to say about their experience with Real Deal Painting in NW Indiana:</p>
+          <p className="text-opacity-80 text-white leading-6 max-w-2xl m-0 text-lg">We don’t just talk a big game - our clients believe in us too. Here’s what some of our customers had to say about their experience with Real Deal Painting in NW Indiana:</p>
         </div>
         <ul className="flex justify-center items-center gap-20">
           {displayedReviews.map((review) => (
