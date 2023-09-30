@@ -6,7 +6,7 @@ import PinLogo from '@/public/assets/pin.svg'
 
 export default function Footer() {
   return (
-    <footer className=" bg-blackBg text-white">
+    <footer className=" bg-stone-950 text-white">
       <div className="mx-auto pt-20 max-w-[70%]">
         {/** Top section */}
         <div className="flex justify-between w-full">
