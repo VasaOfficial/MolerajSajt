@@ -171,3 +171,30 @@
   box-shadow: 0 0 50px 15px #404040;
   transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
 }
+
+/* background picture */
+.neighborhood {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.neighborhood::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: .83;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

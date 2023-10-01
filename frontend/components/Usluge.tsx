@@ -22,7 +22,7 @@ export default function Usluge() {
           <li className="card border max-w-sm border-white text-white border-opacity-30 cursor-pointer p-8">
             <div className="flex flex-col justify-center items-center">
               <div className="bg-iconBg w-20 h-20 mb-6 m-0 flex justify-center items-center relative">
-                <Image alt="i1" src={I1} width={40} height={40}></Image>
+                <Image alt="Drywall Install & Repair" src={I1} width={40} height={40}></Image>
               </div>
               <h3 className="font-black text-xl text-opacity-80 mb-3">Drywall Install & Repair</h3>
               <p className="text-opacity-80 text-white text-center leading-6 text-lg">Experience seamless drywall installation and repair, ensuring smooth walls and flawless finishes for your interiors.</p>
@@ -31,7 +31,7 @@ export default function Usluge() {
           <li className="card border max-w-sm border-white text-white border-opacity-30 cursor-pointer p-8">
             <div className="flex flex-col justify-center items-center">
               <div className="bg-iconBg w-20 h-20 mb-6 m-0 flex justify-center items-center relative">
-                <Image alt="i2" src={I2} width={40} height={40}></Image>
+                <Image alt="Framing" src={I2} width={40} height={40}></Image>
               </div>
               <h3 className="font-black text-xl text-opacity-80 mb-3">Framing</h3>
               <p className="text-opacity-80 text-white text-center leading-6 text-lg">Achieve structural precision with expert wall framing services, laying a strong foundation that will last.
@@ -41,7 +41,7 @@ export default function Usluge() {
           <li className="card border max-w-sm border-white text-white border-opacity-30 cursor-pointer p-8">
             <div className="flex flex-col justify-center items-center">
               <div className="bg-iconBg w-20 h-20 mb-6 m-0 flex justify-center items-center relative">
-                <Image alt="i3" src={I3} width={40} height={40}></Image>
+                <Image alt="Kitchen Remodel" src={I3} width={40} height={40}></Image>
               </div>
               <h3 className="font-black text-xl text-opacity-80 mb-3">Kitchen Remodel</h3>
               <p className="text-opacity-80 text-white text-center leading-6 text-lg">Unlock your kitchen's potential with remodeling services that blend style, functionality, and expert craftsmanship.
@@ -51,7 +51,7 @@ export default function Usluge() {
           <li className="card border max-w-sm border-white text-white border-opacity-30 cursor-pointer p-8">
             <div className="flex flex-col justify-center items-center">
               <div className="bg-iconBg w-20 h-20 mb-6 m-0 flex justify-center items-center relative">
-                <Image alt="i4" src={I4} width={40} height={40}></Image>
+                <Image alt="Bathroom Remodel" src={I4} width={40} height={40}></Image>
               </div>
               <h3 className="font-black text-xl text-opacity-80 mb-3">Bathroom Remodel</h3>
               <p className="text-opacity-80 text-white text-center leading-6 text-lg">Give your bathroom the a new look with our bathroom remodel services that mix relaxing vibes with sleek design.
@@ -61,7 +61,7 @@ export default function Usluge() {
           <li className="card border max-w-sm border-white text-white border-opacity-30 cursor-pointer p-8">
             <div className="flex flex-col justify-center items-center">
               <div className="bg-iconBg w-20 h-20 mb-6 m-0 flex justify-center items-center relative">
-                <Image alt="i5" src={I5} width={40} height={40}></Image>
+                <Image alt="Cabinet Painting" src={I5} width={40} height={40}></Image>
               </div>
               <h3 className="font-black text-xl text-opacity-80 mb-3">Cabinet Painting</h3>
               <p className="text-opacity-80 text-white text-center leading-6 text-lg">Refresh your cabinetry with expert painting services, adding a splash of elegance and modern flair.
@@ -71,7 +71,7 @@ export default function Usluge() {
           <li className="card border max-w-sm border-white text-white border-opacity-30 cursor-pointer p-8">
             <div className="flex flex-col justify-center items-center">
               <div className="bg-iconBg w-20 h-20 mb-6 m-0 flex justify-center items-center relative">
-                <Image alt="i6" src={I6} width={40} height={40}></Image>
+                <Image alt="Fence And Deck Staining" src={I6} width={40} height={40}></Image>
               </div>
               <h3 className="font-black text-xl text-opacity-80 mb-3">Fence And Deck Staining</h3>
               <p className="text-opacity-80 text-white text-center leading-6 text-lg">Enhance your outdoor space with fence and deck staining services, ensuring lasting beauty and protection.
@@ -81,7 +81,7 @@ export default function Usluge() {
           <li className="card border max-w-sm border-white text-white border-opacity-30 cursor-pointer p-8">
             <div className="flex flex-col justify-center items-center">
               <div className="bg-iconBg w-20 h-20 mb-6 m-0 flex justify-center items-center relative">
-                <Image alt="i7" src={I7} width={40} height={40}></Image>
+                <Image alt="Exterior Siding Install" src={I7} width={40} height={40}></Image>
               </div>
               <h3 className="font-black text-xl text-opacity-80 mb-3">Exterior Siding Install</h3>
               <p className="text-opacity-80 text-white text-center leading-6 text-lg">Elevate your home’s curb appeal with exterior siding services that blend durability, style, and precision installation.
@@ -91,7 +91,7 @@ export default function Usluge() {
           <li className="card border max-w-sm border-white text-white border-opacity-30 cursor-pointer p-8">
             <div className="flex flex-col justify-center items-center">
               <div className="bg-iconBg w-20 h-20 mb-6 m-0 flex justify-center items-center relative">
-                <Image alt="i8" src={I8} width={40} height={40}></Image>
+                <Image alt="Commercial Painting" src={I8} width={40} height={40}></Image>
               </div>
               <h3 className="font-black text-xl text-opacity-80 mb-3">Commercial Painting</h3>
               <p className="text-opacity-80 text-white text-center leading-6 text-lg">Revamp your business space with commercial painting services, delivering professionalism through impeccable finishes and hues.
