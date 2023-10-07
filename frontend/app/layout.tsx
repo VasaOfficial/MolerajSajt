@@ -12,11 +12,11 @@ import Navbar from 'components/Navbar';
 export const metadata: Metadata = {
   generator: 'Next.js',
   referrer: 'origin-when-cross-origin',
-  keywords: ['namestaj, stolarija, prozori i stolice, drvo'],
-  title: 'Teoprof',
+  keywords: ['moleraj, obrenovac, farbanje, farba'],
+  title: 'Moleraj Beograd',
   creator: 'Vasilije i Aleksa',
   description:
-    'Dobrodošli na naš sajt posvećen nameštaju i stolariji od drveta - vašem jedinstvenom izvoru inspiracije i rešenja za stvaranje toplih i elegantnih prostora u vašem domu ili poslovnom okruženju. Naša stranica je dizajnirana kako bi vam pružila širok izbor kvalitetnih proizvoda od drveta koji će zadovoljiti vaše najrazličitije potrebe i estetske preferencije.',
+    'Dobrodošli na naš veb sajt posvećen moleraju u svetu biznisa. Pružamo visokokvalitetne usluge moleraja i farbanja za vaše komercijalne potrebe. Sa stručnim timom i najsavremenijim tehnikama, garantujemo besprekoran izgled vaših prostora. Poboljšajte estetiku i funkcionalnost svojih objekata uz naše usluge. Kontaktirajte nas danas za besplatnu procenu i transformišite svoje poslovne prostore u umetnička dela.',
   icons: [
     {
       rel: 'apple-touch-icon',
