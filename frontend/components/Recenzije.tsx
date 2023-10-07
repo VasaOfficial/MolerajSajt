@@ -42,12 +42,11 @@ export default function Recenzije() {
     const displayedReviews = approvedReviews.slice(0, 3);
 
   return (
-    <section className="relative bg-blackBg py-24">
+    <section className="relative bg-zinc-900 py-24">
       <div className="flex flex-col justify-center items-center max-w-[70%] w-full m-auto gap-20">
         <div className="text-center w-full flex flex-col items-center">
-          <span className="text-golden text-lg font-bold tracking-widest">Testemonials</span>
-          <h2 className="text-white uppercase text-5xl font-black text-center tracking-wider m-0 mb-8">What our costumers have to say about our work</h2>
-          <p className="text-opacity-80 text-white leading-6 max-w-2xl m-0 text-lg">We don’t just talk a big game - our clients believe in us too. Here’s what some of our customers had to say about their experience with Real Deal Painting in NW Indiana:</p>
+          <span className="text-golden text-lg font-bold tracking-widest">Recenzije</span>
+          <h2 className="text-white uppercase text-5xl font-black text-center tracking-wider m-0 mb-8">ŠTA NAŠI KUPCI IMALI DA KAŽU O NAŠEM RADU!</h2>
         </div>
         <ul className="flex justify-center items-center gap-20">
           {displayedReviews.map((review) => (
