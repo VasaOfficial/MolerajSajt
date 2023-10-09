@@ -9,8 +9,8 @@ export default function Footer() {
     <footer className=" bg-stone-950 text-white">
       <div className="mx-auto pt-20 max-w-[70%]">
         {/** Top section */}
-        <div className="flex justify-between w-full">
-          <div>
+        <div className="flex justify-between w-full max-lg:flex-col max-lg:items-center">
+          <div className="max-lg:mb-10">
             <Link href='/' aria-label="logo">
               <Image alt="logo" src={BlackLogo}></Image>
             </Link>
@@ -18,41 +18,21 @@ export default function Footer() {
           <div className="flex-nowrap flex">
             <ul className="pr-16 space-y-5">
               <li className="">
-                <span className="tracking-widest text-2xl font-bold">Quick Links</span>
+                <span className="tracking-widest text-2xl font-bold">Stranice</span>
               </li>
               <li className="pt-6">
-                <span className="hover:text-[darkRed] linkWithLine">Painters In Highland</span>
+                <span className="hover:text-[darkRed] linkWithLine">Galerija radova</span>
               </li>
               <li className="cs-li">
-                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
+                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Video galerija</span>
               </li>
               <li className="cs-li">
-                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
-              </li>
-              <li className="cs-li">
-                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
-              </li>
-            </ul>
-            <ul className="pr-16 space-y-5">
-              <li className="">
-                <span className="tracking-widest text-2xl font-bold">Services</span>
-              </li>
-              <li className="pt-6">
-                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
-              </li>
-              <li className="cs-li">
-                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
-              </li>
-              <li className="cs-li">
-                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
-              </li>
-              <li className="cs-li">
-                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Painters In Highland</span>
+                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Recenzije</span>
               </li>
             </ul>
             <ul className="space-y-5">
               <li className="">
-                <span className="tracking-widest text-2xl font-bold">Contact</span>
+                <span className="tracking-widest text-2xl font-bold">Kontakt</span>
               </li>
               <li className="flex items-center pt-6">
                 <Image alt="phone" width={24} height={24} src={PhoneIcon}></Image>
@@ -65,28 +45,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        {/** Middle section */}
-        <div className="my-8">
-          <ul className="flex gap-10">
-            <li className="cs-li">
-              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
-            </li>
-            <li className="cs-li">
-              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
-            </li>
-            <li className="cs-li">
-              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
-            </li>
-            <li className="cs-li">
-              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
-            </li>
-            <li className="cs-li">
-              <span className="cs-header hover:text-[darkRed] linkWithLine">Home</span>
-            </li>
-          </ul>
-        </div>
         {/** Bottom section */}
-        <div className="w-full md:w-auto border-t flex justify-center items-center border-grayBorder">
+        <div className="w-full border-t flex mt-16 justify-center items-center border-grayBorder">
           <span className="my-10 text-center text-base leading-6">
             © Copyright 2023 - Moleraj Beograd
           </span>

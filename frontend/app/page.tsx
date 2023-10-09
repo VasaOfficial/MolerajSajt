@@ -8,7 +8,7 @@ import Iskustvo from "components/Iskustvo";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col h-screen w-screen">
+      <main className="flex flex-col h-screen w-full">
        <Pocetna />  
        <Istaknuto />
        <Iskustvo />
