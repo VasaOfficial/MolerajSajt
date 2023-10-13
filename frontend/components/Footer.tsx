@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="flex justify-between w-full max-lg:flex-col max-lg:items-center">
           <div className="max-lg:mb-10">
             <Link href='/' aria-label="logo">
-              <Image alt="logo" src={BlackLogo}></Image>
+              <Image alt="logo" src={BlackLogo} />
             </Link>
           </div>
           <div className="flex-nowrap flex">
@@ -35,11 +35,11 @@ export default function Footer() {
                 <span className="tracking-widest text-2xl font-bold">Kontakt</span>
               </li>
               <li className="flex items-center pt-6">
-                <Image alt="phone" width={24} height={24} src={PhoneIcon}></Image>
+                <Image alt="phone" width={24} height={24} src={PhoneIcon} />
                 <p className="ml-2 hover:text-[darkRed]">(219) 384-0962</p>
               </li>
               <li className="cs-li flex items-center">
-                <Image alt="location" width={24} height={24} src={PinLogo}></Image>
+                <Image alt="location" width={24} height={24} src={PinLogo} />
                 <p className="ml-2 hover:text-[darkRed]">Grad Beograd I Okolina</p>
               </li>
             </ul>

@@ -8,7 +8,6 @@ import { dark } from '@clerk/themes';
 import type { Metadata } from 'next';
 
 import Navbar from 'components/Navbar';
-import PageIllustration from 'components/PageIllustration';
 
 export const metadata: Metadata = {
   generator: 'Next.js',
@@ -58,7 +57,6 @@ export default async function RootLayout({
         <html lang="en">
           <body>
             <main className="flex h-screen flex-col items-center justify-center">
-              
               <Navbar />
               <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}>
                 {children}
