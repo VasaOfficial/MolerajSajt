@@ -11,7 +11,7 @@ export default function Usluge() {
     <section className="relative bg-blackBg py-24">
       <div className="flex flex-col justify-center items-center max-w-[90%] w-full m-auto gap-20">
         <div className="text-center w-full flex flex-col items-center">
-          <span className="text-golden text-lg font-bold tracking-widest font-montserrat">Dodatne usluge moleraja</span>
+          <span className="text-golden text-lg font-bold tracking-widest font-montserrat mb-2">Dodatne usluge moleraja</span>
           <h2 className="text-white uppercase text-5xl font-black text-center tracking-wider m-0 mb-8 font-oswald">SVE NAŠE USLUGE MOLERAJA I PREUREĐENJA DOMA</h2>
           <p className="text-opacity-80 text-white leading-6 max-w-2xl m-0 text-lg font-montserrat">Naše ekspertize idu dalje od slikanja kuća! Takođe smo majstori usluga preuređenja doma u Beogradu, Obrenovcu i okolini. Od transformacije vaše kuhinje i kupatila u elegantne i funkcionalne prostore do okvira i suvih zidnih projekata, mi smo tu da vas i vaše zidove zaštitimo. Naš raznovrstan spektar usluga osigurava da svaki kutak vašeg doma odražava vaš ukus i način života. Dozvolite da Real Deal Painting bude vaš partner u pretvaranju vaše kuće u dom vaših snova!</p>
         </div>
