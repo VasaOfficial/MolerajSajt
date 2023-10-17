@@ -6,7 +6,7 @@ import PinLogo from '@/public/assets/pin.svg'
 
 export default function Footer() {
   return (
-    <footer className=" bg-stone-950 text-white">
+    <footer className=" bg-stone-950 text-white font-montserrat">
       <div className="mx-auto pt-20 max-w-[70%]">
         {/** Top section */}
         <div className="flex justify-between w-full max-lg:flex-col max-lg:items-center">
@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="flex-nowrap flex">
             <ul className="pr-16 space-y-5">
               <li className="">
-                <span className="tracking-widest text-2xl font-bold">Stranice</span>
+                <span className="tracking-widest text-2xl font-bold font-oswald">Stranice</span>
               </li>
               <li className="pt-6">
                 <span className="hover:text-[darkRed] linkWithLine">Galerija radova</span>
@@ -32,7 +32,7 @@ export default function Footer() {
             </ul>
             <ul className="space-y-5">
               <li className="">
-                <span className="tracking-widest text-2xl font-bold">Kontakt</span>
+                <span className="tracking-widest text-2xl font-bold font-oswald">Kontakt</span>
               </li>
               <li className="flex items-center pt-6">
                 <Image alt="phone" width={24} height={24} src={PhoneIcon} />

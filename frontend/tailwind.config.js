@@ -16,6 +16,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        oswald: ['var(--font-oswald)'],
+        montserrat: ['var(--font-montserrat)'],
+      },
       colors: {
         darkRed : '#AE2024',
         grayBorder: '#3f3f46',

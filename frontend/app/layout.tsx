@@ -4,10 +4,21 @@ import { ReCaptchaProvider } from "next-recaptcha-v3";
 import { ReactQueryProvider } from './providers/ReactQueryProvider';
 import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes';
-
 import type { Metadata } from 'next';
+import { Oswald } from '@next/font/google'
+import { Montserrat } from '@next/font/google'
 
 import Navbar from 'components/Navbar';
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  variable: '--font-oswald',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+})
 
 export const metadata: Metadata = {
   generator: 'Next.js',
@@ -56,7 +67,7 @@ export default async function RootLayout({
     >
         <html lang="en">
           <body>
-            <main className="flex h-screen flex-col items-center justify-center">
+            <main className={`${oswald.variable} ${montserrat.variable} flex h-screen flex-col items-center justify-center`}>
               <Navbar />
               <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}>
                 {children}

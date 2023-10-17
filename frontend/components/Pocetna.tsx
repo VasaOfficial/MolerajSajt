@@ -1,6 +1,5 @@
 'use client'
 
-import Link from "next/link";
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 
 export default function Pocetna() {
@@ -8,19 +7,29 @@ export default function Pocetna() {
     <section className="pt-12">
       <div className="flex w-screen text-white bg-blackBg px-36 gap-x-24 relative">
         <div className="flex justify-center items-center gap-16">
-          <div className="flex-col flex items-start gap-9 mt-64">
-            <h1 className="text-white uppercase text-5xl font-black text-left tracking-wider m-0 mb-4 max-w-3xl">
+          <div className="flex-col flex items-start gap-9 mt-52">
+            <h1 className="text-white uppercase text-5xl font-black text-left tracking-wider max-w-3xl font-oswald leading-tight">
               Naša firma je posvećena pružanju vrhunskih usluga moleraja i krečenja zatransformaciju vaših prostora
             </h1>
-            <p className="text-left text-opacity-80 text-white leading-6 max-w-2xl m-0 text-lg">
+            <p className="text-left text-opacity-80 text-white leading-6 max-w-2xl text-lg font-montserrat">
               Sa stručnim timom iskusnih majstora, nudimo sveobuhvatan spektar usluga - od pripreme površina i odabira boja do precizne izvedbe sa pažnjom na svaki detalj.
               <br />
-              <br /> 
               Bez obzira da li je u pitanju osveženje enterijera ili zaštita eksterijera, mi donosimo boje i inspiraciju u vaš dom ili poslovni prostor. Pregledajte naše dosadašnje radove i pridružite nam se u stvaranju prostora koji odišu estetikom i kvalitetom.
             </p>
-            <Link href='/' className="bg-darkRed p-5 cursor-pointer  font-semibold transition-link mb-10">
-              Procitajte sve recenzije
-            </Link>
+            <ul className="flex gap-10 mb-10">
+              <li className="flex flex-col gap-2">
+                <span className='font-bold font-oswald text-5xl'>10+</span>
+                <span className='text-lg font-montserrat'>Godina Iskustva</span>
+              </li>
+              <li className="flex flex-col gap-2">
+                <span className='font-bold font-oswald text-5xl'>30+</span>
+                <span className='text-lg font-montserrat'>Zadovoljnih klijenata</span>
+              </li>
+              <li className="flex flex-col gap-2">
+                <span className='font-bold font-oswald text-5xl'>5/5</span>
+                <span className='text-lg font-montserrat'>Recenzije</span>
+              </li>
+            </ul>
           </div>
           <div className='mt-32 z-10'>
             <ReactCompareSlider

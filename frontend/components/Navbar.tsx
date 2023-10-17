@@ -19,8 +19,8 @@ export default function Navbar() {
             <Image alt="phone" width={24} height={24} src={PhoneIcon} />
           </div>
             <div className="flex flex-col items-center">
-              <h1 className="font-extrabold">Pozovite nas</h1>
-              <p >(219) 384-0962</p>
+              <h1 className="font-extrabold font-oswald text-lg">Pozovite nas</h1>
+              <p className="font-montserrat">(219) 384-0962</p>
             </div>
           </div>
           <div className="flex items-center gap-2 pl-12">
@@ -28,14 +28,14 @@ export default function Navbar() {
               <Image alt="location" width={24} height={24} src={PinLogo} />
             </div>
             <div className="flex flex-col items-center">
-              <h1 className="font-extrabold ">Lokacija</h1>
-              <p>Grad Beograd I Okolina</p>
+              <h1 className="font-extrabold font-oswald text-lg">Lokacija</h1>
+              <p className="font-montserrat">Grad Beograd I Okolina</p>
             </div>
           </div>
         </div>
         <hr className="border-neutral-600"></hr>
         <div className="flex items-center">
-          <ul className="flex w-full justify-start gap-9 pl-24 uppercase items-center">
+          <ul className="flex w-full justify-start gap-9 pl-24 uppercase items-center font-oswald ">
             <li className="pb-5">
               <Link href="/" className="font-extrabold group text-white cursor-pointer hover:text-[darkRed] linkWithLine">
                 Pocetna

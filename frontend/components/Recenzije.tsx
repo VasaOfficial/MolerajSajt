@@ -45,8 +45,8 @@ export default function Recenzije() {
     <section className="relative bg-zinc-900 py-24">
       <div className="flex flex-col justify-center items-center max-w-[70%] w-full m-auto gap-20">
         <div className="text-center w-full flex flex-col items-center">
-          <span className="text-golden text-lg font-bold tracking-widest">Recenzije</span>
-          <h2 className="text-white uppercase text-5xl font-black text-center tracking-wider m-0 mb-8">ŠTA NAŠI KUPCI IMALI DA KAŽU O NAŠEM RADU!</h2>
+          <span className="text-golden text-lg font-bold tracking-widest font-montserrat">Recenzije</span>
+          <h2 className="text-white uppercase text-5xl font-black text-center tracking-wider m-0 mb-8 font-oswald mt-2">ŠTA NAŠI KUPCI IMAJU DA KAŽU O NAŠEM RADU!</h2>
         </div>
         <ul className="flex justify-center items-center gap-20">
           {displayedReviews.map((review) => (
