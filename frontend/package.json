@@ -51,6 +51,7 @@
     "next-seo": "^6.1.0",
     "next-sitemap": "^4.2.3",
     "react": "^18.2.0",
+    "react-compare-slider": "^2.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.2",
     "rsuite": "^5.40.0",

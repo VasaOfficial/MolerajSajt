@@ -48,6 +48,12 @@ export default function Navbar() {
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 bg-white"></span>
               </Link>
             </li>
+            <li className="pb-5">
+              <Link href="/" className="font-extrabold group text-white cursor-pointer hover:text-[darkRed] linkWithLine">
+                Recenzije
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 bg-white"></span>
+              </Link>
+            </li>
           </ul>
           <Link href="/login" className="bg-darkRed text-center cursor-pointer py-4 px-10 font-semibold transition-link mr-12 mb-4 text-lg">
             Login
