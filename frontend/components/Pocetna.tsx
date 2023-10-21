@@ -1,11 +1,15 @@
 'use client'
 
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+import PageIllustration from './PageIllustration';
 
 export default function Pocetna() {
   return (
-    <section className="pt-12">
-      <div className="flex w-screen text-white bg-blackBg px-36 gap-x-24 relative">
+    <section className="pt-12 relative">
+      <div className="flex w-full text-white bg-blackBg px-36">
+      <div className='absolute'>
+          <PageIllustration/>
+        </div>
         <div className="flex justify-center items-center gap-16">
           <div className="flex-col flex items-start gap-9 mt-52">
             <h1 className="text-white uppercase text-5xl font-black text-left tracking-wider max-w-3xl font-oswald leading-tight">
@@ -39,8 +43,8 @@ export default function Pocetna() {
             />
           </div>
         </div>
-        <div className="absolute left-[52%] top-[50%] hidden lg:block pointer-events-none" aria-hidden="true" data-aos="fade-up" data-aos-delay="400">
-          <svg  width="564" height="552" viewBox="0 0 564 552" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="absolute left-[45%] top-[47%] hidden lg:block" aria-hidden="true" data-aos="fade-up" data-aos-delay="400">
+          <svg  width="500" height="450" viewBox="0 0 564 552" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="illustration-02" x1="-3.766" y1="300.204" x2="284.352" y2="577.921" gradientUnits="userSpaceOnUse">
                 <stop stopColor="#5D5DFF" stopOpacity=".01" />
