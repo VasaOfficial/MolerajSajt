@@ -8,7 +8,7 @@ import I8 from '@/public/assets/i_icons/i8.svg'
 
 export default function Usluge() {
   return (
-    <section className="relative bg-blackBg py-24">
+    <section className="w-full relative bg-blackBg py-24">
       <div className="flex flex-col justify-center items-center max-w-[90%] w-full m-auto gap-20">
         <div className="text-center w-full flex flex-col items-center">
           <span className="text-golden text-lg font-bold tracking-widest font-montserrat mb-2">Dodatne usluge moleraja</span>

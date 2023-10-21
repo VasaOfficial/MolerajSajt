@@ -7,12 +7,39 @@ import PinLogo from "@/public/assets/pin.svg";
 export default function Navbar() {
   return (
     <nav className="fixed top-0 z-50 w-full bg-blackBg flex items-center text-white shadow-[0_5px_30px_-10px] shadow-zinc-500 border-none">
-      <div className="bg-darkRed p-5">
-        <Link href="/">
-          <Image alt="logo" src={BlackLogo} height={325} width={325} />
-        </Link>
+      <div className="flex items-center justify-between w-full">
+        <div className="bg-darkRed p-5 max-md:p-2 max-md:w-32">
+          <Link href="/">
+            <Image alt="logo" src={BlackLogo} height={325} width={325} />
+          </Link>
+        </div>
+        <div className="md:hidden mr-10">
+          <div className="menuToggle">
+            <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+            <ul className="menu text-black text-left">
+              <li className="pb-5">
+                <Link href="/" className="font-extrabold text-xl text-white">
+                  Pocetna
+                </Link>
+              </li>
+              <li className="pb-5">
+                <Link href="/" className="font-extrabold text-xl text-white">
+                  Galerija radova
+                </Link>
+              </li>
+              <li className="pb-5">
+                <Link href="/" className="font-extrabold text-xl text-white">
+                  Recenzije
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col gap-y-6 w-full">
+      <div className="flex flex-col gap-y-6 w-full max-md:hidden">
         <div className="flex w-full justify-end pt-4 pr-10">
           <div className="flex items-center gap-2 border-neutral-600 border-r-2 pr-12">
           <div className="border-neutral-600 border-8 bg-neutral-600 rounded-full mr-2">

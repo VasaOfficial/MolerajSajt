@@ -42,7 +42,7 @@ export default function Recenzije() {
     const displayedReviews = approvedReviews.slice(0, 3);
 
   return (
-    <section className="relative bg-zinc-900 py-24">
+    <section className="w-full relative bg-zinc-900 py-24">
       <div className="flex flex-col justify-center items-center max-w-[70%] w-full m-auto gap-20">
         <div className="text-center w-full flex flex-col items-center">
           <span className="text-golden text-lg font-bold tracking-widest font-montserrat">Recenzije</span>

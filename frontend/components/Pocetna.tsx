@@ -5,8 +5,8 @@ import PageIllustration from './PageIllustration';
 
 export default function Pocetna() {
   return (
-    <section className="pt-12 relative">
-      <div className="flex w-full text-white bg-blackBg px-36">
+    <section className="pt-12 w-full">
+      <div className="flex text-white bg-blackBg px-36">
       <div className='absolute'>
           <PageIllustration/>
         </div>
