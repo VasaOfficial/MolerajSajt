@@ -5,22 +5,22 @@ import PageIllustration from './PageIllustration';
 
 export default function Pocetna() {
   return (
-    <section className="pt-12 w-full">
-      <div className="flex text-white bg-blackBg px-36">
-      <div className='absolute'>
+    <section className="pt-12 w-full h-auto">
+      <div className="flex text-white bg-blackBg px-36 max-xl:px-0 items-center justify-center">
+        <div className='absolute top-0 -left-80 mt-32 max-[840px]:mt-20'>
           <PageIllustration/>
         </div>
-        <div className="flex justify-center items-center gap-16">
-          <div className="flex-col flex items-start gap-9 mt-52">
-            <h1 className="text-white uppercase text-5xl font-black text-left tracking-wider max-w-3xl font-oswald leading-tight">
+        <div className="flex justify-center items-center gap-16 max-xl:flex-col max-xl:gap-0">
+          <div className="flex-col flex items-start gap-9 mt-52 max-[840px]:mt-20 max-xl:items-center max-xl:max-w-[90%]">
+            <h1 className="text-white uppercase text-5xl font-black text-left tracking-wider max-w-3xl font-oswald leading-tight z-10 max-xl:text-center max-sm:text-3xl">
               Naša firma je posvećena pružanju vrhunskih usluga moleraja i krečenja zatransformaciju vaših prostora
             </h1>
-            <p className="text-left text-opacity-80 text-white leading-6 max-w-2xl text-lg font-montserrat">
+            <p className="text-left text-opacity-80 text-white leading-6 max-w-2xl text-lg font-montserrat max-xl:text-center">
               Sa stručnim timom iskusnih majstora, nudimo sveobuhvatan spektar usluga - od pripreme površina i odabira boja do precizne izvedbe sa pažnjom na svaki detalj.
               <br />
               Bez obzira da li je u pitanju osveženje enterijera ili zaštita eksterijera, mi donosimo boje i inspiraciju u vaš dom ili poslovni prostor. Pregledajte naše dosadašnje radove i pridružite nam se u stvaranju prostora koji odišu estetikom i kvalitetom.
             </p>
-            <ul className="flex gap-10 mb-10">
+            <ul className="flex gap-10 mb-10 max-xl:text-center">
               <li className="flex flex-col gap-2">
                 <span className='font-bold font-oswald text-5xl'>10+</span>
                 <span className='text-lg font-montserrat'>Godina Iskustva</span>
@@ -35,7 +35,7 @@ export default function Pocetna() {
               </li>
             </ul>
           </div>
-          <div className='mt-32 z-10'>
+          <div className='mt-32 z-10 max-xl:mb-10 max-xl:mt-0 max-[840px]:max-w-[90%]'>
             <ReactCompareSlider
               onlyHandleDraggable={true}
               itemOne={<ReactCompareSliderImage src="/assets/after.png" alt="after" />}
@@ -43,8 +43,8 @@ export default function Pocetna() {
             />
           </div>
         </div>
-        <div className="absolute left-[45%] top-[47%] hidden lg:block" aria-hidden="true" data-aos="fade-up" data-aos-delay="400">
-          <svg  width="500" height="450" viewBox="0 0 564 552" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="absolute left-[45%] top-[47%] max-xl:hidden" aria-hidden="true" data-aos="fade-up" data-aos-delay="400">
+          <svg width="500" height="450" viewBox="0 0 564 552" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="illustration-02" x1="-3.766" y1="300.204" x2="284.352" y2="577.921" gradientUnits="userSpaceOnUse">
                 <stop stopColor="#5D5DFF" stopOpacity=".01" />

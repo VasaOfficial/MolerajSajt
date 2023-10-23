@@ -1,7 +1,7 @@
 export default function PageIllustration() {
   return (
-    <div className="max-w-6xl mx-auto" aria-hidden="true">
-    <svg className="absolute top-0 right-0 transform translate-x-1/2 -mr-16" width="1000" height="420" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className="mx-auto" aria-hidden="true">
+    <svg className="absolute transform translate-x-1/2 z-1" width="400" height="300" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="illustration-01" x1="-4.14" y1="43.12" x2="303.145" y2="391.913" gradientUnits="userSpaceOnUse">
             <stop stopColor="#5D5DFF" stopOpacity=".01" />

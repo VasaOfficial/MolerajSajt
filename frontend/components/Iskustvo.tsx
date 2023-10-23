@@ -14,7 +14,7 @@ export default function Iskustvo() {
           <h2 className="text-white uppercase text-5xl font-black text-center tracking-wider m-0 mb-8 font-oswald">Zasto Izabrati nas?</h2>
           <p className="text-opacity-80 text-white leading-6 max-w-2xl m-0 text-lg font-montserrat max-lg:text-sm max-lg:max-w-[80%]">Stojimo iza našeg rada sa garancijom od 100% kvaliteta izvedenih radova i ako imate bilo kakve brige ili probleme sa bilo kojim delom završenog posla, osiguraćemo da budu rešeni i otklonjeni. Naš cilj broj 1 je da svakog klijenta ostavimo zadovoljnim i 100% srećnim sa našim radom. Ako tražite izvođača za moleraj, gletovanje, farbanje i krečenje koji će posao obaviti kako treba već prvi put, ne tražite dalje!</p>
         </div>
-        <ul className="flex flex-row justify-center flex-wrap items-stretch m-0 p-0 text-white max-w-full gap-x-10 gap-y-15 font-oswald max-lg:flex-col max-lg:items-center">
+        <ul className="flex flex-row justify-center flex-wrap items-stretch m-0 p-0 mt-10 text-white max-w-full gap-x-10 gap-y-15 font-oswald max-lg:flex-col max-lg:items-center">
           <li className="w-1/4 max-w-sm max-lg:w-[90%] max-lg:mt-10">
             <div className="w-24 h-24 m-auto mb-6 bg-white flex items-center justify-center">
               <Image alt="s1" src={s1} width={38} height={38}></Image>

@@ -6,13 +6,13 @@ import PinLogo from "@/public/assets/pin.svg";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 z-50 w-full bg-blackBg flex items-center text-white shadow-[0_5px_30px_-10px] shadow-zinc-500 border-none">
-        <div className="bg-darkRed p-5 max-md:p-2 max-md:w-32 max-md:hidden">
-          <Link href="/">
-            <Image alt="logo" src={BlackLogo} height={325} width={325} />
-          </Link>
-        </div>
-      <div className="flex flex-col gap-y-6 w-full max-md:hidden">
+    <nav className="fixed top-0 z-50 w-full bg-blackBg flex items-center text-white shadow-[0_5px_30px_-10px] shadow-zinc-500 border-none max-h-48">
+      <div className="bg-darkRed p-5 max-md:p-2 max-md:w-32 max-[840px]:hidden max-h-48 min-h-full h-full">
+        <Link href="/">
+          <Image alt="logo" src={BlackLogo} height={325} width={325} />
+        </Link>
+      </div>
+      <div className="flex flex-col gap-y-4 w-full max-[840px]:hidden max-lg:gap-y-3">
         <div className="flex w-full justify-end pt-4 pr-10">
           <div className="flex items-center gap-2 border-neutral-600 border-r-2 pr-12">
           <div className="border-neutral-600 border-8 bg-neutral-600 rounded-full mr-2">
@@ -35,7 +35,7 @@ export default function Navbar() {
         </div>
         <hr className="border-neutral-600"></hr>
         <div className="flex items-center">
-          <ul className="flex w-full justify-start gap-9 pl-24 uppercase items-center font-oswald ">
+          <ul className="flex w-full justify-start gap-9 pl-24 uppercase items-center font-oswald max-lg:pl-10">
             <li className="pb-5">
               <Link href="/" className="font-extrabold group text-white cursor-pointer hover:text-[darkRed] linkWithLine">
                 Pocetna
@@ -55,19 +55,19 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <Link href="/login" className="bg-darkRed text-center cursor-pointer py-4 px-10 font-semibold transition-link mr-12 mb-4 text-lg">
+          <Link href="/login" className="bg-darkRed text-center cursor-pointer py-5 px-10 font-semibold transition-link mr-12 mb-4 text-lg">
             Login
           </Link>
         </div>
       </div>
       {/* Mobile */}
-      <div className="flex items-center justify-between w-full md:hidden">
-        <div className="bg-darkRed p-5 max-md:p-2 max-md:w-32">
+      <div className="flex items-center justify-between w-full min-[840px]:hidden">
+        <div className="bg-darkRed p-5 max-[840px]:p-2 max-[840px]:w-32">
           <Link href="/">
             <Image alt="logo" src={BlackLogo} height={325} width={325} />
           </Link>
         </div>
-        <div className="md:hidden mr-10">
+        <div className="min-[840px]:hidden mr-5">
           <div className="menuToggle">
             <input type="checkbox" />
               <span></span>

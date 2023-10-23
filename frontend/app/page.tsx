@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col h-full w-full mt-10">
-        <Pocetna />  
+        <Pocetna />
         <Istaknuto />
         <Iskustvo />
         <Usluge />
