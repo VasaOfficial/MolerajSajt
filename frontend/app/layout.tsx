@@ -7,7 +7,6 @@ import { dark } from '@clerk/themes';
 import type { Metadata } from 'next';
 import { Oswald } from '@next/font/google'
 import { Montserrat } from '@next/font/google'
-
 import Navbar from 'components/Navbar';
 
 const oswald = Oswald({
@@ -67,8 +66,8 @@ export default async function RootLayout({
     >
         <html lang="en">
           <body>
+            <Navbar />
             <main className={`${oswald.variable} ${montserrat.variable} flex h-screen flex-col items-center justify-center`}>
-              <Navbar />
               <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}>
                 {children}
               </ReCaptchaProvider>

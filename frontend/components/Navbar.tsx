@@ -89,6 +89,11 @@ export default function Navbar() {
                   Recenzije
                 </Link>
               </li>
+              <li className="pb-5">
+                <Link href="/login" className="font-extrabold text-xl text-white">
+                  Login
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

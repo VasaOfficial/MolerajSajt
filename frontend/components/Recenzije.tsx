@@ -62,7 +62,7 @@ export default function Recenzije() {
           <Link href="/review_form" className="bg-darkRed p-5 cursor-pointer font-semibold transition-link">
             Ostavite recenziju
           </Link>
-          <Link href='/' className="bg-darkRed p-5 cursor-pointer font-semibold transition-link">
+          <Link href='/recenzije' className="bg-darkRed p-5 cursor-pointer font-semibold transition-link">
             Procitajte sve recenzije
           </Link>
         </div>
