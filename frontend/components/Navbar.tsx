@@ -6,7 +6,7 @@ import PinLogo from "@/public/assets/pin.svg";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 z-50 w-full bg-blackBg flex items-center text-white shadow-[0_5px_30px_-10px] shadow-zinc-500 border-none max-h-48">
+    <nav className="fixed z-50 w-full bg-blackBg flex items-center text-white shadow-[0_5px_30px_-10px] shadow-zinc-500 border-none max-h-48">
       <div className="bg-darkRed p-5 max-md:p-2 max-md:w-32 max-lx:hidden max-h-48 min-h-full h-full">
         <Link href="/">
           <Image alt="logo" src={BlackLogo} height={325} width={325} />
