@@ -7,12 +7,12 @@ import PinLogo from "@/public/assets/pin.svg";
 export default function Navbar() {
   return (
     <nav className="fixed top-0 z-50 w-full bg-blackBg flex items-center text-white shadow-[0_5px_30px_-10px] shadow-zinc-500 border-none max-h-48">
-      <div className="bg-darkRed p-5 max-md:p-2 max-md:w-32 max-[840px]:hidden max-h-48 min-h-full h-full">
+      <div className="bg-darkRed p-5 max-md:p-2 max-md:w-32 max-lx:hidden max-h-48 min-h-full h-full">
         <Link href="/">
           <Image alt="logo" src={BlackLogo} height={325} width={325} />
         </Link>
       </div>
-      <div className="flex flex-col gap-y-4 w-full max-[840px]:hidden max-lg:gap-y-3">
+      <div className="flex flex-col gap-y-4 w-full max-lx:hidden max-lg:gap-y-3">
         <div className="flex w-full justify-end pt-4 pr-10">
           <div className="flex items-center gap-2 border-neutral-600 border-r-2 pr-12">
           <div className="border-neutral-600 border-8 bg-neutral-600 rounded-full mr-2">
@@ -61,8 +61,8 @@ export default function Navbar() {
         </div>
       </div>
       {/* Mobile */}
-      <div className="flex items-center justify-between w-full min-[840px]:hidden">
-        <div className="bg-darkRed p-5 max-[840px]:p-2 max-[840px]:w-32">
+      <div className="flex items-center justify-between w-full lx:hidden">
+        <div className="bg-darkRed p-5 max-lx:p-2 max-lx:w-32">
           <Link href="/">
             <Image alt="logo" src={BlackLogo} height={325} width={325} />
           </Link>

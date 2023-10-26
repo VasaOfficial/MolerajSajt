@@ -7,11 +7,11 @@ export default function Pocetna() {
   return (
     <section className="pt-12 w-full h-auto">
       <div className="flex text-white bg-blackBg px-36 max-xl:px-0 items-center justify-center">
-        <div className='absolute top-0 -left-80 mt-32 max-[840px]:mt-20'>
+        <div className='absolute top-0 -left-80 mt-32 max-lx:mt-20'>
           <PageIllustration/>
         </div>
         <div className="flex justify-center items-center gap-16 max-xl:flex-col max-xl:gap-0">
-          <div className="flex-col flex items-start gap-9 mt-52 max-[840px]:mt-20 max-xl:items-center max-xl:max-w-[90%]">
+          <div className="flex-col flex items-start gap-9 mt-52 max-lx:mt-20 max-xl:items-center max-xl:max-w-[90%]">
             <h1 className="text-white uppercase text-5xl font-black text-left tracking-wider max-w-3xl font-oswald leading-tight z-10 max-xl:text-center max-sm:text-3xl">
               Naša firma je posvećena pružanju vrhunskih usluga moleraja i krečenja zatransformaciju vaših prostora
             </h1>
@@ -35,7 +35,7 @@ export default function Pocetna() {
               </li>
             </ul>
           </div>
-          <div className='mt-32 z-10 max-xl:mb-10 max-xl:mt-0 max-[840px]:max-w-[90%]'>
+          <div className='mt-32 z-10 max-xl:mb-10 max-xl:mt-0 max-lx:max-w-[90%]'>
             <ReactCompareSlider
               onlyHandleDraggable={true}
               itemOne={<ReactCompareSliderImage src="/assets/after.png" alt="after" />}

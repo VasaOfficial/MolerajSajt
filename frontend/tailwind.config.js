@@ -13,10 +13,12 @@ module.exports = {
       padding: '2rem',
       screens: {
         '2xl': '1400px',
-        'lx': '840px',
       },
     },
     extend: {
+      screens: {
+        'lx': '890px', // You can change the size to your desired value
+      },
       fontFamily: {
         oswald: ['var(--font-oswald)'],
         montserrat: ['var(--font-montserrat)'],
