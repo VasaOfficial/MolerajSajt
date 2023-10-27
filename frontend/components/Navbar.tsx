@@ -43,13 +43,13 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="pb-5">
-              <Link href="/" className="font-extrabold group text-white cursor-pointer hover:text-[darkRed] linkWithLine">
+              <Link href="/galerija" className="font-extrabold group text-white cursor-pointer hover:text-[darkRed] linkWithLine">
                 Galerija radova
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 bg-white"></span>
               </Link>
             </li>
             <li className="pb-5">
-              <Link href="/" className="font-extrabold group text-white cursor-pointer hover:text-[darkRed] linkWithLine">
+              <Link href="/recenzije" className="font-extrabold group text-white cursor-pointer hover:text-[darkRed] linkWithLine">
                 Recenzije
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 bg-white"></span>
               </Link>
@@ -80,12 +80,12 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="pb-5">
-                <Link href="/" className="font-extrabold text-xl text-white">
+                <Link href="/galerija" className="font-extrabold text-xl text-white">
                   Galerija radova
                 </Link>
               </li>
               <li className="pb-5">
-                <Link href="/" className="font-extrabold text-xl text-white">
+                <Link href="/recenzije" className="font-extrabold text-xl text-white">
                   Recenzije
                 </Link>
               </li>
