@@ -55,7 +55,7 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <Link href="/login" className="bg-darkRed text-center cursor-pointer py-5 px-10 font-semibold transition-link mr-12 mb-4 text-lg">
+          <Link href="/admin_interface" className="bg-darkRed text-center cursor-pointer py-5 px-10 font-semibold transition-link mr-12 mb-4 text-lg">
             Login
           </Link>
         </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="pb-5">
-                <Link href="/login" className="font-extrabold text-xl text-white">
+                <Link href="/admin_interface" className="font-extrabold text-xl text-white">
                   Login
                 </Link>
               </li>
