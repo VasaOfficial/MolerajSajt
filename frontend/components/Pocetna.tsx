@@ -38,8 +38,8 @@ export default function Pocetna() {
           <div className='mt-32 z-10 max-xl:mb-10 max-xl:mt-0 max-lx:max-w-[90%]'>
             <ReactCompareSlider
               onlyHandleDraggable={true}
-              itemOne={<ReactCompareSliderImage src="/assets/after.png" alt="after" />}
-              itemTwo={<ReactCompareSliderImage src="/assets/before.png" alt="before" />}
+              itemOne={<ReactCompareSliderImage src="/assets/after.webp" alt="after" />}
+              itemTwo={<ReactCompareSliderImage src="/assets/before.webp" alt="before" />}
             />
           </div>
         </div>

@@ -48,7 +48,7 @@ export default function Recenzije() {
           <span className="text-golden text-lg font-bold tracking-widest font-montserrat">Recenzije</span>
           <h2 className="text-white uppercase text-5xl font-black text-center tracking-wider m-0 mb-8 font-oswald mt-2 max-lg:leading-tight">ŠTA NAŠI KUPCI IMAJU DA KAŽU O NAŠEM RADU!</h2>
         </div>
-        <ul className="flex justify-center items-center gap-20 max-lg:flex-col">
+        <div className="flex justify-center items-center gap-20 max-lg:flex-col">
           {displayedReviews.map((review) => (
             <div key={review.id}>
               <ReviewCardsMemoized
@@ -57,7 +57,7 @@ export default function Recenzije() {
               />
             </div>
           ))}
-        </ul>
+        </div>
         <div className="flex flex-col text-lg justify-center items-center text-white gap-10">
           <Link href="/review_form" className="bg-darkRed p-5 cursor-pointer font-semibold transition-link">
             Ostavite recenziju
