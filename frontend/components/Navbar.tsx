@@ -20,7 +20,7 @@ export default function Navbar() {
           </div>
             <div className="flex flex-col items-center">
               <h1 className="font-extrabold font-oswald text-lg">Pozovite nas</h1>
-              <p className="font-montserrat">(219) 384-0962</p>
+              <p className="font-montserrat">+381 63 338323</p>
             </div>
           </div>
           <div className="flex items-center gap-2 pl-12">
