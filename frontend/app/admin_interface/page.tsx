@@ -1,8 +1,5 @@
-import TaskPage from "./components/TaskPage";
+import TaskPage from './components/TaskPage';
 
 export default async function AdminInterfacePage() {
-  
-  return (
-    <TaskPage />
-  );
+  return <TaskPage />;
 }

@@ -1,21 +1,19 @@
-import Footer from "components/Footer";
-import Pocetna from "components/Pocetna";
-import Recenzije from "components/Recenzije";
-import Istaknuto from "components/Istaknuto";
-import Usluge from "components/Usluge";
-import Iskustvo from "components/Iskustvo";
+import Footer from 'components/Footer';
+import Iskustvo from 'components/Iskustvo';
+import Istaknuto from 'components/Istaknuto';
+import Pocetna from 'components/Pocetna';
+import Recenzije from 'components/Recenzije';
+import Usluge from 'components/Usluge';
 
 export default function Home() {
   return (
-    <>
-      <main className="flex flex-col h-full w-full mt-10">
-        <Pocetna />
-        <Istaknuto />
-        <Iskustvo />
-        <Usluge />
-        <Recenzije />
-        <Footer/>
-      </main>
-    </>
+    <main className="mt-10 flex h-full w-full flex-col">
+      <Pocetna />
+      <Istaknuto />
+      <Iskustvo />
+      <Usluge />
+      <Recenzije />
+      <Footer />
+    </main>
   );
 }

@@ -1,38 +1,49 @@
-import Image from "next/image";
-import Link from "next/link";
-import BlackLogo from '@/public/assets/logo.png'
-import PhoneIcon from '@/public/assets/phone.svg'
-import PinLogo from '@/public/assets/pin.svg'
+import Image from 'next/image';
+import Link from 'next/link';
+
+import BlackLogo from '@/public/assets/logo.png';
+import PhoneIcon from '@/public/assets/phone.svg';
+import PinLogo from '@/public/assets/pin.svg';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-stone-950 text-white font-montserrat">
-      <div className="mx-auto pt-20 max-w-[70%]">
+    <footer className="w-full bg-stone-950 font-montserrat text-white">
+      <div className="mx-auto max-w-[70%] pt-20">
         {/** Top section */}
-        <div className="flex justify-between w-full max-lg:flex-col max-lg:items-center">
+        <div className="flex w-full justify-between max-lg:flex-col max-lg:items-center">
           <div className="max-lg:mb-10">
-            <Link href='/' aria-label="logo">
+            <Link href="/" aria-label="logo">
               <Image alt="logo" src={BlackLogo} />
             </Link>
           </div>
-          <div className="flex-nowrap flex">
-            <ul className="pr-16 space-y-5">
+          <div className="flex flex-nowrap">
+            <ul className="space-y-5 pr-16">
               <li className="">
-                <span className="tracking-widest text-2xl font-bold font-oswald">Stranice</span>
+                <span className="font-oswald text-2xl font-bold tracking-widest">
+                  Stranice
+                </span>
               </li>
               <li className="pt-6">
-                <span className="hover:text-[darkRed] linkWithLine">Galerija radova</span>
+                <span className="linkWithLine hover:text-[darkRed]">
+                  Galerija radova
+                </span>
               </li>
               <li className="cs-li">
-                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Video galerija</span>
+                <span className="linkWithLine cursor-pointer hover:text-[darkRed]">
+                  Video galerija
+                </span>
               </li>
               <li className="cs-li">
-                 <span className="hover:text-[darkRed] cursor-pointer linkWithLine">Recenzije</span>
+                <span className="linkWithLine cursor-pointer hover:text-[darkRed]">
+                  Recenzije
+                </span>
               </li>
             </ul>
             <ul className="space-y-5">
               <li className="">
-                <span className="tracking-widest text-2xl font-bold font-oswald">Kontakt</span>
+                <span className="font-oswald text-2xl font-bold tracking-widest">
+                  Kontakt
+                </span>
               </li>
               <li className="flex items-center pt-6">
                 <Image alt="phone" width={24} height={24} src={PhoneIcon} />
@@ -40,13 +51,15 @@ export default function Footer() {
               </li>
               <li className="cs-li flex items-center">
                 <Image alt="location" width={24} height={24} src={PinLogo} />
-                <p className="ml-2 hover:text-[darkRed]">Grad Beograd I Okolina</p>
+                <p className="ml-2 hover:text-[darkRed]">
+                  Grad Beograd I Okolina
+                </p>
               </li>
             </ul>
           </div>
         </div>
         {/** Bottom section */}
-        <div className="w-full border-t flex mt-16 justify-center items-center border-grayBorder">
+        <div className="mt-16 flex w-full items-center justify-center border-t border-grayBorder">
           <span className="my-10 text-center text-base leading-6">
             © Copyright 2023 - Moleraj Beograd
           </span>

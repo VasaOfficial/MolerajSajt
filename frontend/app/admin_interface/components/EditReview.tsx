@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 interface EditReviewProps {
   review: {
@@ -30,34 +30,38 @@ export function EditReview({ review, onSave, onCancel }: EditReviewProps) {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-40">
-      <div className="bg-white p-4 rounded shadow-md w-80">
-        <h2 className="text-lg font-semibold mb-2">Izmeni recenziju</h2>
+    <div className="fixed left-0 top-0 flex h-full w-full items-center justify-center bg-black bg-opacity-40">
+      <div className="w-80 rounded bg-white p-4 shadow-md">
+        <h2 className="mb-2 text-lg font-semibold">Izmeni recenziju</h2>
         <input
           type="text"
           placeholder="Name"
           value={editedName}
           onChange={(e) => setEditedName(e.target.value)}
-          className="w-full p-2 mb-2 border rounded"
+          className="mb-2 w-full rounded border p-2"
         />
         <textarea
           placeholder="Feedback"
           value={editedReview}
           onChange={(e) => setEditedReview(e.target.value)}
-          className="w-full p-2 mb-2 border rounded resize-none"
+          className="mb-2 w-full resize-none rounded border p-2"
         />
         <input
           type="number"
           placeholder="Rating"
           value={editedRating}
           onChange={(e) => setEditedRating(Number(e.target.value))}
-          className="w-full p-2 mb-2 border rounded"
+          className="mb-2 w-full rounded border p-2"
         />
         <div className="flex justify-end">
-          <button onClick={handleSave} className="btn-primary mr-2">
+          <button
+            type="button"
+            onClick={handleSave}
+            className="btn-primary mr-2"
+          >
             Save
           </button>
-          <button onClick={onCancel} className="btn-secondary">
+          <button type="button" onClick={onCancel} className="btn-secondary">
             Cancel
           </button>
         </div>

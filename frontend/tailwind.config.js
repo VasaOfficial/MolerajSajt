@@ -17,14 +17,14 @@ module.exports = {
     },
     extend: {
       screens: {
-        'lx': '890px', // You can change the size to your desired value
+        lx: '890px', // You can change the size to your desired value
       },
       fontFamily: {
         oswald: ['var(--font-oswald)'],
         montserrat: ['var(--font-montserrat)'],
       },
       colors: {
-        darkRed : '#AE2024',
+        darkRed: '#AE2024',
         grayBorder: '#3f3f46',
         blackBg: '#121212',
         golden: '#D87D2B',

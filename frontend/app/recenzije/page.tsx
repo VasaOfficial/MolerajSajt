@@ -1,9 +1,9 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import ReviewCards from "components/ReviewCards";
-import supabase from "utils/supabaseClient";
+import ReviewCards from 'components/ReviewCards';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import supabase from 'utils/supabaseClient';
 
 type Review = {
   id: number;
@@ -15,11 +15,6 @@ const ReviewCardsMemoized = React.memo(ReviewCards);
 
 export default function RecenzijePage() {
   const [approvedReviews, setApprovedReviews] = useState<Review[]>([]);
-
-  // Fetch approved reviews when the component mounts
-  useEffect(() => {
-    fetchApprovedReviews();
-  }, []);
 
   const fetchApprovedReviews = async () => {
     try {
@@ -38,10 +33,14 @@ export default function RecenzijePage() {
     }
   };
 
+  useEffect(() => {
+    fetchApprovedReviews();
+  }, []);
+
   return (
-    <section className="w-full h-auto relative bg-zinc-900 max-[1474px]:mt-96 max-xl:mt-0 max-[1154px]:mt-96">
-      <div className="flex flex-col justify-center items-center max-w-[90%] w-full m-auto mt-96 ">
-        <ul className="flex justify-center items-center gap-20 flex-wrap mt-60 max-lg:gap-7 max-lg:mt-20 max-[688]:gap-2">
+    <section className="relative h-auto w-full bg-zinc-900 max-[1474px]:mt-96 max-xl:mt-0 max-[1154px]:mt-96">
+      <div className="m-auto mt-96 flex w-full max-w-[90%] flex-col items-center justify-center ">
+        <ul className="max-[688]:gap-2 mt-60 flex flex-wrap items-center justify-center gap-20 max-lg:mt-20 max-lg:gap-7">
           {approvedReviews.map((review) => (
             <div key={review.id}>
               <ReviewCardsMemoized
@@ -51,8 +50,11 @@ export default function RecenzijePage() {
             </div>
           ))}
         </ul>
-        <div className="flex flex-col text-lg justify-center items-center text-white gap-10 mt-10">
-          <Link href="/review_form" className="bg-darkRed p-5 cursor-pointer font-semibold transition-link mb-10">
+        <div className="mt-10 flex flex-col items-center justify-center gap-10 text-lg text-white">
+          <Link
+            href="/review_form"
+            className="transition-link mb-10 cursor-pointer bg-darkRed p-5 font-semibold"
+          >
             Ostavite recenziju
           </Link>
         </div>

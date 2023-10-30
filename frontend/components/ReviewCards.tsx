@@ -1,17 +1,26 @@
-import Image from "next/image";
-import quote from 'public/assets/quote.svg'
+import Image from 'next/image';
+import quote from 'public/assets/quote.svg';
 
 type ReviewCardsProps = {
   name: string;
   feedback: string;
-}
+};
 
 export default function ReviewCards({ name, feedback }: ReviewCardsProps) {
   return (
-    <div className={`border-[darkRed] border flex flex-col items-center bg-[#0a0a0a] m-0 w-96 h-96 justify-center max-lg:w-72 max-xl:w-72 px-5 p`}>
-      <Image src={quote} alt="quote" quality={100} width={40} height={38} className="h-auto mb-3 " />
-      <p className="text-gray-300 my-5 max-w-sm text-xl text-center">{feedback}</p>
-      <span className="text-white text-2xl">- {name}</span>
+    <div className="m-0 flex h-96 w-96 flex-col items-center justify-center border border-[darkRed] bg-[#0a0a0a] px-5 max-xl:w-72 max-lg:w-72">
+      <Image
+        src={quote}
+        alt="quote"
+        quality={100}
+        width={40}
+        height={38}
+        className="mb-3 h-auto "
+      />
+      <p className="my-5 max-w-sm text-center text-xl text-gray-300">
+        {feedback}
+      </p>
+      <span className="text-2xl text-white">- {name}</span>
     </div>
   );
 }

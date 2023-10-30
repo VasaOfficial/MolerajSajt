@@ -1,17 +1,16 @@
-"use client"
+'use client';
 
-import { ColumnDef } from "@tanstack/react-table"
+import type { ColumnDef } from '@tanstack/react-table';
 
-import { Checkbox } from "../../ui/checkbox"
-
-import { statuses } from "../../data/data"
-import { Task } from "../../data/schema"
-import { DataTableColumnHeader } from "./data-table-column-header"
-import { DataTableRowActions } from "./data-table-row-actions"
+import { statuses } from '../../data/data';
+import type { Task } from '../../data/schema';
+import { Checkbox } from '../../ui/checkbox';
+import { DataTableColumnHeader } from './data-table-column-header';
+import { DataTableRowActions } from './data-table-row-actions';
 
 export const columns: ColumnDef<Task>[] = [
   {
-    id: "select",
+    id: 'select',
     header: ({ table }) => (
       <Checkbox
         checked={table.getIsAllPageRowsSelected()}
@@ -32,91 +31,88 @@ export const columns: ColumnDef<Task>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "id",
+    accessorKey: 'id',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="ID" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("id")}</div>,
+    cell: ({ row }) => <div className="w-[80px]">{row.getValue('id')}</div>,
     enableSorting: false,
     enableHiding: false,
   },
   {
-    accessorKey: "name",
+    accessorKey: 'name',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Name" />
     ),
     cell: ({ row }) => {
-
       return (
         <div className="flex space-x-2">
           <span className="max-w-[500px] truncate font-medium">
-            {row.getValue("name")}
+            {row.getValue('name')}
           </span>
         </div>
-      )
+      );
     },
   },
   {
-    accessorKey: "feedback",
+    accessorKey: 'feedback',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Recenzija" />
     ),
     cell: ({ row }) => {
-
       return (
         <div className="flex space-x-2">
-          <span className="max-w-[500px] font-medium hover:overflow-visible cursor-pointer">
-            {row.getValue("feedback")}
+          <span className="max-w-[500px] cursor-pointer font-medium hover:overflow-visible">
+            {row.getValue('feedback')}
           </span>
         </div>
-      )
+      );
     },
   },
   {
-    accessorKey: "rating",
+    accessorKey: 'rating',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Zvezdice" />
     ),
     cell: ({ row }) => {
-
       return (
         <div className="flex space-x-2">
           <span className="max-w-[500px] truncate font-medium">
-            {row.getValue("rating")}
+            {row.getValue('rating')}
           </span>
         </div>
-      )
+      );
     },
   },
   {
-    accessorKey: "status",
+    accessorKey: 'status',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Status" />
     ),
     cell: ({ row }) => {
-      const status = statuses.find(
-        (status) => status.value === row.getValue("status")
-      )
+      const statusValue = statuses.find(
+        (status) => status.value === row.getValue('status'),
+      );
 
-      if (!status) {
-        return null
+      if (!statusValue) {
+        return null;
       }
 
       return (
         <div className="flex w-[100px] items-center">
-          {status.icon && (
-            <status.icon className="mr-2 h-4 w-4 text-muted-foreground" />
+          {statusValue.icon && (
+            <statusValue.icon className="mr-2 h-4 w-4 text-muted-foreground" />
           )}
-          <span>{status.label}</span>
+          <span>{statusValue.label}</span>
         </div>
-      )
+      );
     },
     filterFn: (row, id, value) => {
-      return value.includes(row.getValue(id))
+      return value.includes(row.getValue(id));
     },
   },
   {
-    id: "actions",
+    id: 'actions',
     cell: ({ row }) => <DataTableRowActions row={row} />,
   },
-]
+];

@@ -1,23 +1,25 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import '../styles/global.css';
-import '@smastrom/react-rating/style.css'
-import { ReCaptchaProvider } from "next-recaptcha-v3";
-import { ReactQueryProvider } from './providers/ReactQueryProvider';
-import { ClerkProvider } from '@clerk/nextjs'
+import '@smastrom/react-rating/style.css';
+
+import { ClerkProvider } from '@clerk/nextjs';
 import { dark } from '@clerk/themes';
-import type { Metadata } from 'next';
-import { Oswald } from '@next/font/google'
-import { Montserrat } from '@next/font/google'
+import { Montserrat, Oswald } from '@next/font/google';
 import Navbar from 'components/Navbar';
+import type { Metadata } from 'next';
+import { ReCaptchaProvider } from 'next-recaptcha-v3';
+
+import { ReactQueryProvider } from './providers/ReactQueryProvider';
 
 const oswald = Oswald({
   subsets: ['latin'],
   variable: '--font-oswald',
-})
+});
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
-})
+});
 
 export const metadata: Metadata = {
   generator: 'Next.js',
@@ -56,19 +58,22 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <ReactQueryProvider>
       <ClerkProvider
-      appearance={{
-        baseTheme: dark
-      }}
-    >
+        appearance={{
+          baseTheme: dark,
+        }}
+      >
         <html lang="en">
           <body>
             <Navbar />
-            <main className={`${oswald.variable} ${montserrat.variable} flex h-screen flex-col items-center justify-center`}>
-              <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}>
+            <main
+              className={`${oswald.variable} ${montserrat.variable} flex h-screen flex-col items-center justify-center`}
+            >
+              <ReCaptchaProvider
+                reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}
+              >
                 {children}
               </ReCaptchaProvider>
             </main>

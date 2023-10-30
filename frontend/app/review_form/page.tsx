@@ -1,14 +1,7 @@
-"use client"
+'use client';
 
-import { useState } from 'react';
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
-import { Input } from 'components/ui/input';
-import { Textarea } from "components/ui/textarea"
-import { useReCaptcha, ReCaptchaProvider } from "next-recaptcha-v3";
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import supabase from 'utils/supabaseClient';
+import { zodResolver } from '@hookform/resolvers/zod';
+import Alert from 'components/Alert';
 import { Button } from 'components/ui/button';
 import {
   Form,
@@ -18,7 +11,17 @@ import {
   FormLabel,
   FormMessage,
 } from 'components/ui/form';
-import Alert from 'components/Alert';
+import { Input } from 'components/ui/input';
+import { Textarea } from 'components/ui/textarea';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import supabase from 'utils/supabaseClient';
+import * as z from 'zod';
+
+type FormData = {
+  name: string;
+  feedback: string;
+};
 
 const FormSchema = z.object({
   name: z.string().min(1).max(15),
@@ -32,37 +35,20 @@ export default function ReviewForm() {
     resolver: zodResolver(FormSchema),
   });
 
-  const { executeRecaptcha } = useReCaptcha();
-  const queryClient = useQueryClient();
-
-  const mutation = useMutation(
-    async () => {
-      const token = await executeRecaptcha('form_submit');
-  
-      const { data, error } = await supabase.from('review').upsert([
+  const onSubmit = async (data: FormData) => {
+    try {
+      const { error } = await supabase.from('review').upsert([
         {
-          name: form.getValues('name'),
-          feedback: form.getValues('feedback'),
+          name: data.name,
+          feedback: data.feedback,
           status: 'pending',
         },
       ]);
-  
+
       if (error) {
         throw new Error(error.message);
       }
-  
-      return data;
-    },
-    {
-      onSuccess: () => {
-        queryClient.invalidateQueries(['feedback']);
-      },
-    }
-  );  
 
-  const onSubmit = async () => {
-    try {
-      await mutation.mutateAsync();
       setIsSubmitted(true);
     } catch (error) {
       console.error(error);
@@ -71,12 +57,9 @@ export default function ReviewForm() {
 
   return (
     <Form {...form}>
-      {isSubmitted && (
-            <Alert />
-          )}
-        <form onSubmit={form.handleSubmit(onSubmit)}>
-      <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}>
-        <div className="p-16 font-semibold flex flex-col justify-center items-center gap-10 bg-slate-200 rounded-md">
+      {isSubmitted && <Alert />}
+      <form onSubmit={form.handleSubmit(onSubmit)}>
+        <div className="mt-36 flex flex-col items-center justify-center gap-10 rounded-md bg-slate-200 p-16 font-semibold">
           <h1 className="text-2xl">Ostavite utisak</h1>
           <FormField
             control={form.control}
@@ -113,9 +96,13 @@ export default function ReviewForm() {
               </FormItem>
             )}
           />
-          <Button type='submit' className="rounded bg-blue-700 py-4 px-8 text-xl text-white">Posalji</Button>
+          <Button
+            type="submit"
+            className="rounded bg-blue-700 px-8 py-4 text-xl text-white"
+          >
+            Posalji
+          </Button>
         </div>
-      </ReCaptchaProvider>
       </form>
     </Form>
   );

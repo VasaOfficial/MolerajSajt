@@ -1,20 +1,21 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { DotsHorizontalIcon } from "@radix-ui/react-icons"
-import { Row } from "@tanstack/react-table"
+import { DotsHorizontalIcon } from '@radix-ui/react-icons';
+import { useQueryClient } from '@tanstack/react-query';
+import type { Row } from '@tanstack/react-table';
+import { useState } from 'react';
 import useTaskStore from 'stores/reviewStore';
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import supabase from "utils/supabaseClient";
-import { Button } from "../../ui/button"
-import { EditReview } from "../EditReview";
+import supabase from 'utils/supabaseClient';
+
+import { Button } from '../../ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../../ui/dropdown-menu"
+} from '../../ui/dropdown-menu';
+import { EditReview } from '../EditReview';
 
 type Review = {
   id: number;
@@ -23,88 +24,88 @@ type Review = {
   rating: number;
 };
 
-interface DataTableRowActionsProps<TData extends { id: number; name: string; feedback: string; rating: number }> {
+interface DataTableRowActionsProps<
+  TData extends { id: number; name: string; feedback: string; rating: number },
+> {
   row: Row<TData>;
 }
 
-export function DataTableRowActions<TData extends { id: number; name: string; feedback: string; rating: number }>({
-  row,
-}: DataTableRowActionsProps<TData>) {
-  const [isDeleted, setIsDeleted] = useState(false)
+export function DataTableRowActions<
+  TData extends { id: number; name: string; feedback: string; rating: number },
+>({ row }: DataTableRowActionsProps<TData>) {
   const { tasks, setTasks } = useTaskStore();
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
-  const queryClient = useQueryClient()
-  const queryKey = ['reviews'];
+  const queryClient = useQueryClient();
 
- // Define the mutation to update the review
- const { mutate: updateReview } = useMutation<void, unknown, Review>(
-  async (updatedReview) => {
-    const { error } = await supabase
-      .from('review')
-      .update(updatedReview)
-      .eq('id', updatedReview.id);
+  // Define the mutation to update the review
+  async function updateReview(updatedReview: Review) {
+    try {
+      const { error } = await supabase
+        .from('review')
+        .update(updatedReview)
+        .eq('id', updatedReview.id);
 
-    if (error) {
-      console.error('Error updating review:', error);
-      throw new Error('Error updating review');
-    }
-  },
-  {
-    // After the mutation is successful, invalidate the query to refetch data
-    onSuccess: () => {
-      queryClient.invalidateQueries(queryKey);
-    },
-  }
-);
-
-const handleDeleteRow = async () => {
-  if (window.confirm('Da li ste sigurni da hocete da izbrisete ovaj komentar?')) {
-    const { data, error } = await supabase
-      .from('review')
-      .delete()
-      .eq('id', row.original.id);
-
-    if (error) {
-      console.error('Error deleting review:', error);
-      alert('Row deletion failed.');
-    } else {
-      setTasks(tasks.filter((task) => task.id !== row.original.id));
-      setIsDeleted(true);
+      if (error) {
+        console.error('Error updating review:', error);
+        throw new Error('Error updating review');
+      }
+      // After the mutation is successful, invalidate the query to refetch data
+      queryClient.invalidateQueries({ queryKey: ['reviews'] });
+    } catch (error) {
+      console.error('An error occurred:', error);
     }
   }
-};
 
-const handleEditRow = () => {
-  setIsEditModalOpen(true);
-};
+  const handleDeleteRow = async () => {
+    if (
+      window.confirm('Da li ste sigurni da hocete da izbrisete ovaj komentar?')
+    ) {
+      const { error } = await supabase
+        .from('review')
+        .delete()
+        .eq('id', row.original.id);
 
-const handleCloseEditModal = () => {
-  setIsEditModalOpen(false);
-};
-
-const handleSaveReview = (updatedReview: Review) => {
-  updateReview(updatedReview);
-
-  setIsEditModalOpen(false);
-};
-
-const handleApproveReview = async () => {
-  if (window.confirm('Da li ste sigurni da hocete da odobrite ovaj komentar?')) {
-    const { data, error } = await supabase
-      .from('review')
-      .update({ status: 'done' })
-      .eq('id', row.original.id);
-
-    if (error) {
-      console.error('Error approving review:', error);
-      alert('Review approval failed.');
-    } else {
-      // Refresh the data by invalidating the query
-      queryClient.invalidateQueries(queryKey);
+      if (error) {
+        console.error('Error deleting review:', error);
+        alert('Row deletion failed.');
+      } else {
+        setTasks(tasks.filter((task) => task.id !== row.original.id));
+      }
     }
-  }
-};
+  };
+
+  const handleEditRow = () => {
+    setIsEditModalOpen(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+  };
+
+  const handleSaveReview = (updatedReview: Review) => {
+    updateReview(updatedReview);
+    setIsEditModalOpen(false);
+  };
+
+  const handleApproveReview = async () => {
+    if (
+      window.confirm('Da li ste sigurni da hocete da odobrite ovaj komentar?')
+    ) {
+      const { error } = await supabase
+        .from('review')
+        .update({ status: 'done' })
+        .eq('id', row.original.id);
+
+      if (error) {
+        console.error('Error approving review:', error);
+        alert('Review approval failed.');
+      } else {
+        // Refresh the data by invalidating the query
+        queryClient.invalidateQueries({ queryKey: ['reviews'] });
+      }
+    }
+  };
 
   return (
     <div>
@@ -120,10 +121,14 @@ const handleApproveReview = async () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-[160px]">
           <DropdownMenuItem onClick={handleEditRow}>Izmeni</DropdownMenuItem>
-          <DropdownMenuItem onClick={handleApproveReview}>Postuj</DropdownMenuItem>
+          <DropdownMenuItem onClick={handleApproveReview}>
+            Postuj
+          </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={handleDeleteRow}>Izbrisi </DropdownMenuItem>
+          <DropdownMenuItem onClick={handleDeleteRow}>
+            Izbrisi{' '}
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       {isEditModalOpen && (
@@ -134,5 +139,5 @@ const handleApproveReview = async () => {
         />
       )}
     </div>
-  )
+  );
 }
