@@ -53,6 +53,9 @@ export const metadata: Metadata = {
       url: '/favicon.ico',
     },
   ],
+  other: {
+    'google-site-verification': 'kvEgrUV1XzzgH8aAmsPpDQoPz7MhygDK4yzKKHWusVk',
+  },
 };
 
 export default async function RootLayout({
@@ -69,10 +72,6 @@ export default async function RootLayout({
       >
         <Head>
           <html lang="en" />
-          <meta
-            name="google-site-verification"
-            content="kvEgrUV1XzzgH8aAmsPpDQoPz7MhygDK4yzKKHWusVk"
-          />
         </Head>
         <body>
           <Navbar />
