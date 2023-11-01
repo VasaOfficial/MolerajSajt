@@ -18,7 +18,7 @@ export default function Pocetna() {
           <div className="mt-52 flex flex-col items-start gap-9 max-xl:max-w-[90%] max-xl:items-center max-lx:mt-20">
             <h1 className="z-10 max-w-3xl text-left font-oswald text-5xl font-black uppercase leading-tight tracking-wider text-white max-xl:text-center max-sm:text-3xl">
               Naša firma je posvećena pružanju vrhunskih usluga moleraja i
-              krečenja zatransformaciju vaših prostora
+              krečenja za transformaciju vaših prostora
             </h1>
             <p className="max-w-2xl text-left font-montserrat text-lg leading-6 text-white text-opacity-80 max-xl:text-center">
               Sa stručnim timom iskusnih majstora, nudimo sveobuhvatan spektar
