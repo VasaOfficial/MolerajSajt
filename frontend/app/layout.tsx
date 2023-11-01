@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable simple-import-sort/imports */
 import '../styles/global.css';
 import '@smastrom/react-rating/style.css';
 
@@ -8,6 +9,7 @@ import { Montserrat, Oswald } from '@next/font/google';
 import Navbar from 'components/Navbar';
 import type { Metadata } from 'next';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
+import Head from 'next/head';
 
 import { ReactQueryProvider } from './providers/ReactQueryProvider';
 
@@ -65,20 +67,25 @@ export default async function RootLayout({
           baseTheme: dark,
         }}
       >
-        <html lang="en">
-          <body>
-            <Navbar />
-            <main
-              className={`${oswald.variable} ${montserrat.variable} flex h-screen flex-col items-center justify-center`}
+        <Head>
+          <html lang="en" />
+          <meta
+            name="google-site-verification"
+            content="kvEgrUV1XzzgH8aAmsPpDQoPz7MhygDK4yzKKHWusVk"
+          />
+        </Head>
+        <body>
+          <Navbar />
+          <main
+            className={`${oswald.variable} ${montserrat.variable} flex h-screen flex-col items-center justify-center`}
+          >
+            <ReCaptchaProvider
+              reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}
             >
-              <ReCaptchaProvider
-                reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}
-              >
-                {children}
-              </ReCaptchaProvider>
-            </main>
-          </body>
-        </html>
+              {children}
+            </ReCaptchaProvider>
+          </main>
+        </body>
       </ClerkProvider>
     </ReactQueryProvider>
   );
