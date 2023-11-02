@@ -44,7 +44,7 @@ export default function Navbar() {
                 href="/"
                 className="linkWithLine group cursor-pointer font-extrabold text-white hover:text-[darkRed]"
               >
-                Pocetna
+                Početna
                 <span className="block max-w-0 bg-white transition-all duration-300 group-hover:max-w-full" />
               </Link>
             </li>
@@ -91,7 +91,7 @@ export default function Navbar() {
             <ul className="menu text-left text-black">
               <li className="pb-5">
                 <Link href="/" className="text-xl font-extrabold text-white">
-                  Pocetna
+                  Početna
                 </Link>
               </li>
               <li className="pb-5">

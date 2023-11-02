@@ -30,11 +30,6 @@ export default function Footer() {
               </li>
               <li className="cs-li">
                 <span className="linkWithLine cursor-pointer hover:text-[darkRed]">
-                  Video galerija
-                </span>
-              </li>
-              <li className="cs-li">
-                <span className="linkWithLine cursor-pointer hover:text-[darkRed]">
                   Recenzije
                 </span>
               </li>

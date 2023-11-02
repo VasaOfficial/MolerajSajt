@@ -15,7 +15,7 @@ export default function Iskustvo() {
             ISKUSTVO
           </span>
           <h2 className="m-0 mb-8 text-center font-oswald text-5xl font-black uppercase tracking-wider text-white">
-            Zasto Izabrati nas?
+            Zašto izabrati nas?
           </h2>
           <p className="m-0 max-w-2xl font-montserrat text-lg leading-6 text-white text-opacity-80 max-lg:max-w-[80%] max-lg:text-sm">
             Stojimo iza našeg rada sa garancijom od 100% kvaliteta izvedenih
