@@ -48,7 +48,7 @@ export default function Recenzije() {
           <span className="font-montserrat text-lg font-bold tracking-widest text-golden">
             Recenzije
           </span>
-          <h2 className="m-0 mb-8 mt-2 text-center font-oswald text-5xl font-black uppercase tracking-wider text-white max-lg:leading-tight">
+          <h2 className="m-0 mb-8 mt-2 text-center font-oswald text-5xl font-black uppercase tracking-wider text-white max-lg:leading-tight leading-tight">
             ŠTA NAŠI KUPCI IMAJU DA KAŽU O NAŠEM RADU!
           </h2>
         </div>

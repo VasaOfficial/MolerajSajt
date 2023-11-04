@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       screens: {
-        lx: '890px', // You can change the size to your desired value
+        lx: '890px',
+        xs: '1458px',
       },
       fontFamily: {
         oswald: ['var(--font-oswald)'],

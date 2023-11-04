@@ -38,27 +38,25 @@ export default function RecenzijePage() {
   }, []);
 
   return (
-    <section className="relative h-full w-full bg-zinc-900 max-[1474px]:mt-96 max-xl:mt-0 max-[1154px]:mt-96">
-      <div className="m-auto mt-20 flex w-full max-w-[90%] flex-col items-center justify-center ">
-        <ul className="max-[688]:gap-2 mt-60 flex flex-wrap items-center justify-center gap-20 max-lg:mt-20 max-lg:gap-7">
-          {approvedReviews.map((review) => (
-            <div key={review.id}>
-              <ReviewCardsMemoized
-                name={review.name}
-                feedback={review.feedback}
-              />
-            </div>
-          ))}
-        </ul>
-        <div className="mt-10 flex flex-col items-center justify-center gap-10 text-lg text-white">
-          <Link
-            href="/review_form"
-            className="transition-link mb-10 cursor-pointer bg-darkRed p-5 font-semibold"
-          >
-            Ostavite recenziju
-          </Link>
-        </div>
+    <div className="flex w-full flex-col items-center justify-center bg-zinc-900 mt-44 max-xl:mt-40 lg:h-full">
+      <div className="flex flex-wrap items-center justify-center gap-20 max-lg:gap-7 max-lg:mt-96 max-sm:pt-96 max-sm:mt-96">
+        {approvedReviews.map((review) => (
+          <div key={review.id}>
+            <ReviewCardsMemoized
+              name={review.name}
+              feedback={review.feedback}
+            />
+          </div>
+        ))}
       </div>
-    </section>
+      <div className="my-10 flex flex-col items-center justify-center text-lg text-white">
+        <Link
+          href="/review_form"
+          className="transition-link mb-10 cursor-pointer bg-darkRed p-5 font-semibold"
+        >
+          Ostavite recenziju
+        </Link>
+      </div>
+    </div>
   );
 }
