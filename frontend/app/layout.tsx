@@ -9,7 +9,6 @@ import { Montserrat, Oswald } from '@next/font/google';
 import Navbar from 'components/Navbar';
 import type { Metadata } from 'next';
 import { ReCaptchaProvider } from 'next-recaptcha-v3';
-import Head from 'next/head';
 
 import { ReactQueryProvider } from './providers/ReactQueryProvider';
 
@@ -70,9 +69,6 @@ export default async function RootLayout({
           baseTheme: dark,
         }}
       >
-        <Head>
-          <html lang="en" />
-        </Head>
         <body>
           <Navbar />
           <main
