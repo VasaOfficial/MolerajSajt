@@ -59,7 +59,7 @@ function InViewAnimation({ item, isOdd }: InViewAnimationProps) {
 
 export default function Galerija() {
   return (
-    <section className="relative mt-96 flex h-auto w-full items-center bg-stone-950">
+    <section className="relative mt-96 flex h-auto w-full items-center bg-stone-950 max-lg:mt-32 max-md:mt-96 sm:mt-0 pt-96 max-sm:pt-5 max-sm:mt-72">
       <div className="mx-auto mb-20 mt-96 flex w-full max-w-[90%] flex-col items-center justify-center gap-16 pt-60 max-xl:pt-10 max-lg:mt-56 max-lg:pt-0 max-md:mt-16">
         {data.map((item, index) => (
           <InViewAnimation key={index} item={item} isOdd={index % 2 === 1} />
