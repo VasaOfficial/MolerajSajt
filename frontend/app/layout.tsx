@@ -85,10 +85,3 @@ export default async function RootLayout({
     </ReactQueryProvider>
   );
 }
-
-
-export const metadata: Metadata = {
-  verification: {
-    google: 'XXXXXXXXXXXXXXXX',
-  },
-};
