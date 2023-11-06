@@ -23,7 +23,7 @@ export default function Navbar() {
               <h1 className="font-oswald text-lg font-extrabold">
                 Pozovite nas
               </h1>
-              <p className="font-montserrat">+381 63 338323</p>
+              <p className="font-montserrat">+381 63 388323</p>
             </div>
           </div>
           <div className="flex items-center gap-2 pl-12">

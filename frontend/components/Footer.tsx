@@ -42,7 +42,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center pt-6">
                 <Image alt="phone" width={24} height={24} src={PhoneIcon} />
-                <p className="ml-2 hover:text-[darkRed]">+381 63 338323</p>
+                <p className="ml-2 hover:text-[darkRed]">+381 63 388323</p>
               </li>
               <li className="cs-li flex items-center">
                 <Image alt="location" width={24} height={24} src={PinLogo} />
