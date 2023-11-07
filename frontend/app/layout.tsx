@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable simple-import-sort/imports */
+/* eslint-disable jsx-a11y/lang */
 import '../styles/global.css';
 import '@smastrom/react-rating/style.css';
 
@@ -52,9 +53,6 @@ export const metadata: Metadata = {
       url: '/favicon.ico',
     },
   ],
-  other: {
-    'google-site-verification': 'kvEgrUV1XzzgH8aAmsPpDQoPz7MhygDK4yzKKHWusVk',
-  },
 };
 
 export default async function RootLayout({
@@ -69,18 +67,26 @@ export default async function RootLayout({
           baseTheme: dark,
         }}
       >
-        <body>
-          <Navbar />
-          <main
-            className={`${oswald.variable} ${montserrat.variable} flex h-screen flex-col items-center justify-center`}
-          >
-            <ReCaptchaProvider
-              reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}
+        <html lang="eng">
+          <head>
+            <meta
+              name="google-site-verification"
+              content="kvEgrUV1XzzgH8aAmsPpDQoPz7MhygDK4yzKKHWusVk"
+            />
+          </head>
+          <body>
+            <Navbar />
+            <main
+              className={`${oswald.variable} ${montserrat.variable} flex h-screen flex-col items-center justify-center`}
             >
-              {children}
-            </ReCaptchaProvider>
-          </main>
-        </body>
+              <ReCaptchaProvider
+                reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_CLIENT_KEY}
+              >
+                {children}
+              </ReCaptchaProvider>
+            </main>
+          </body>
+        </html>
       </ClerkProvider>
     </ReactQueryProvider>
   );
